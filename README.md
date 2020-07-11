@@ -27,3 +27,9 @@ The requirements we are installing are:
 ```
 pip3 install -r requirements.txt
 ```
+##### 3. Create `.env` file to store the passwords and security-sensitive information.
+##### 4. Create `.gitignore` file to git ignore the environment variables file, which are never committed to the repository.
+```
+.env
+```
+##### 5. Connect mongodb 
