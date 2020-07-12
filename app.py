@@ -2,12 +2,13 @@ from flask import Flask, render_template, request, redirect, url_for
 import pymongo
 from dotenv import load_dotenv
 import os
+import datetime
 
 load_dotenv()
 
 app = Flask(__name__)
 
-MONGO_URI = os.environ.get('MONGO_URI')
+MONGO_URI = os.environ.get("MONGO_URI")
 client = pymongo.MongoClient(MONGO_URI)
 
 DB_NAME = "pro3"
@@ -31,10 +32,10 @@ def schedule_create_process():
     transit_days = request.form.get("transit_days")
 
     client[DB_NAME].schedule.insert_one({
-        "eta_pol_date": eta_pol_date,
+        "eta_pol_date": datetime.datetime.strptime(eta_pol_date, "%Y-%m-%d"),
         "pol": pol,
         "pod": pod,
-        "eta_pod_date": eta_pod_date,
+        "eta_pod_date": datetime.datetime.strptime(eta_pod_date, "%Y-%m-%d"),
         "vessel": vessel,
         "vovage": vovage,
         "transit_days": transit_days

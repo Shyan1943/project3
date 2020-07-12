@@ -43,5 +43,7 @@ Another blue button should appear to click: *Open Browser*.
 
 ##### 8. Start create `@app.route("/")` & template.html
 
+##### 9. import dateime, Python strptime()
+```datetime.datetime.strptime(date, "%Y-%m-%d")```
 
 
