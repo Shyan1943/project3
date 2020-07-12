@@ -32,4 +32,16 @@ pip3 install -r requirements.txt
 ```
 .env
 ```
-##### 5. Connect mongodb 
+##### 5. Create file `app.py` and insert flask template
+
+##### 6. Connect mongodb 
+
+##### 7. Open Browser
+To run a backend Python file, type `python3 app.py`, if Python file is named `app.py` of course.
+A blue button should appear to click: *Make Public*,
+Another blue button should appear to click: *Open Browser*.
+
+##### 8. Start create `@app.route("/")` & template.html
+
+
+

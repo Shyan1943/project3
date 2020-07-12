@@ -1,0 +1,38 @@
+<!doctype html>
+{% extends "layout.template.html" %}
+
+{% block title %}Create New Schedule{% endblock %}
+
+{% block content %}
+<form method="POST">
+	<div>
+        <label>ETA POL :</label>
+        <input type="date" name="eta_pol_date" class="form-control"/>
+    </div>
+    <div>
+        <label>POL :</label>
+        <input type="text" name="pol" class="form-control"/>
+    </div>
+    <div>
+        <label>POD :</label>
+        <input type="text" name="pod" class="form-control"/>
+    </div>
+    <div>
+        <label>ETA POD :</label>
+        <input type="date" name="eta_pod_date" class="form-control"/>
+    </div>
+    <div>
+        <label>Vessel :</label>
+        <input type="text" name="vessel" class="form-control"/>
+    </div>
+    <div>
+        <label>Vovage :</label>
+        <input type="text" name="vovage" class="form-control"/>
+    </div>
+    <div>
+        <label>Transit Days :</label>
+        <input type="text" name="transit_days" class="form-control"/>
+	</div>
+    <input type="submit" value="Create" class="btn btn-primary mt-3"/>
+</form>
+{% endblock %}
