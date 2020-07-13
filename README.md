@@ -41,12 +41,43 @@ To run a backend Python file, type `python3 app.py`, if Python file is named `ap
 A blue button should appear to click: *Make Public*,
 Another blue button should appear to click: *Open Browser*.
 
-### 8. Start create `@app.route("/")` & template.html for "C" Creation
+### 8. Start create `@app.route("/schedule/create")` & template.html for "C" Creation
 
 ### 9. import dateime, Python strptime()
 ```datetime.datetime.strptime(date, "%Y-%m-%d")```
 
-### 10. create `@app.route("/")` & template.html for "R" Reading
+### 10. create home `@app.route("/")` & template.html for "R" Reading
 Using <a href="https://getbootstrap.com/docs/4.4/content/tables/">Bootstrap Table</a> to show the schedule list, added Create button at the home page to bring external user to the create form page. Also, use of Flask `redirect` to bring external user back to the home page. 
+
+## 11. Flash Messages 
+11.a) import flash messages
+
+11.b) Session Key generated from https://randomkeygen.com/
+
+11.c) save the Session Key in the environment variables file 
+
+11.d) save & restart server `python3 app.py`
+
+11.e) read in the SESSION_KEY variable from the operating system environment ```SESSION_KEY = os.environ.get('SESSION_KEY')```
+
+11.f) set the session Key ```app.secret_key = SESSION_KEY```
+
+11.g) In the layout.template.html add in the code to display the flash messages:
+
+    ```
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for m in messages %}
+            <div class="alert alert-success">
+                {{m}}
+            </div>
+            {% endfor %}
+        {%endif%}
+    {%endwith%}
+    ```
+
+
+
+
 
 

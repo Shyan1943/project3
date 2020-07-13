@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, flash
 import pymongo
 from dotenv import load_dotenv
 import os
@@ -13,14 +13,20 @@ client = pymongo.MongoClient(MONGO_URI)
 
 DB_NAME = "pro3"
 
+SESSION_KEY = os.environ.get("SESSION_KEY")
+app.secret_key = SESSION_KEY
+
+
 @app.route("/")
 def home():
     schedules = client[DB_NAME].schedule.find()
     return render_template("home.template.html", schedules=schedules)
 
+
 @app.route("/schedule/create")
 def schedule_create_form():
     return render_template("schedule_create.template.html")
+
 
 @app.route("/schedule/create", methods=["POST"])
 def schedule_create_process():
@@ -41,8 +47,9 @@ def schedule_create_process():
         "vovage": vovage,
         "transit_days": transit_days
     })
-
+    flash(f"New schedule '{vessel} V.{vovage}' has been created")
     return redirect(url_for("home"))
+
 
 # "magic code" -- boilerplate
 if __name__ == '__main__':
