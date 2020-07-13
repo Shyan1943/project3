@@ -15,7 +15,8 @@ DB_NAME = "pro3"
 
 @app.route("/")
 def home():
-    return "Home"
+    schedules = client[DB_NAME].schedule.find()
+    return render_template("home.template.html", schedules=schedules)
 
 @app.route("/schedule/create")
 def schedule_create_form():
@@ -41,7 +42,7 @@ def schedule_create_process():
         "transit_days": transit_days
     })
 
-    return "Schedule created successful!!"
+    return redirect(url_for("home"))
 
 # "magic code" -- boilerplate
 if __name__ == '__main__':
