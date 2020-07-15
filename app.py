@@ -100,6 +100,7 @@ def schedule_delete_process(id):
     client[DB_NAME].schedule.remove({
         "_id": ObjectId(id)
     })
+    flash("One schedule has been deleted")
     return redirect(url_for("home"))
 
     # "magic code" -- boilerplate
