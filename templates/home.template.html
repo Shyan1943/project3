@@ -15,20 +15,24 @@
         <th scope="col">Transit Days</th>
         <th scope="col">Member</th>
         <th scope="col">Action</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
     {% for s in schedules %}
       <tr>
-        <td>{{s.eta_pol_date}}</td>
+        <td>{{s.eta_pol}}</td>
         <td>{{s.pol}}</td>
         <td>{{s.pod}}</td>
-        <td>{{s.eta_pod_date}}</td>
+        <td>{{s.eta_pod}}</td>
         <td>{{s.vessel}}</td>
         <td>{{s.vovage}}</td>
         <td>{{s.transit_days}}</td>
         <td>Member</td>
         <td>Book</td>
+        <td>
+            <a href="{{url_for('schedule_update_form', id=s._id)}}" class="btn btn-primary btn-sm">Edit</a>
+        </td>
       </tr>
     {% endfor %}
     </tbody>

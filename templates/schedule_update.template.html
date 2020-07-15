@@ -1,0 +1,39 @@
+<!doctype html>
+{% extends "layout.template.html" %}
+
+{% block title %}Update Schedule{% endblock %}
+
+{% block content %}
+<form method="POST">
+    <div>
+        <label>ETA POL :</label>
+        <input type="date" class="form-control" name="eta_pol" value="{{schedule.eta_pol}}"/>
+    </div>
+    <div>
+        <label>POL :</label>
+        <input type="text" class="form-control" name="pol" value="{{schedule.pol}}"/>
+    </div>
+    <div>
+        <label>POD :</label>
+        <input type="text" class="form-control" name="pod" value="{{schedule.pod}}"/>
+    </div>
+    <div>
+        <label>ETA POD :</label>
+        <input type="date" class="form-control" name="eta_pod" value="{{schedule.eta_pod}}"/>
+    </div>
+    <div>
+        <label>Vessel :</label>
+        <input type="text" class="form-control" name="vessel" value="{{schedule.vessel}}"/>
+    </div>
+    <div>
+        <label>Vovage :</label>
+        <input type="text" class="form-control" name="vovage" value="{{schedule.vovage}}"/>
+    </div>
+    <div>
+        <label>Transit Days :</label>
+        <input type="text" class="form-control" name="transit_days" value="{{schedule.transit_days}}"/>
+	</div>
+
+    <input type="submit" class="btn btn-primary mt-3" value="Update"/>
+</form>
+{% endblock %}

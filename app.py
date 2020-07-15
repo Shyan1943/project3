@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
-import pymongo
-from dotenv import load_dotenv
 import os
+from bson.objectid import ObjectId
+from dotenv import load_dotenv
+import pymongo
 import datetime
 
 load_dotenv()
@@ -30,19 +31,19 @@ def schedule_create_form():
 
 @app.route("/schedule/create", methods=["POST"])
 def schedule_create_process():
-    eta_pol_date = request.form.get("eta_pol_date")
+    eta_pol = request.form.get("eta_pol")
     pol = request.form.get("pol")
     pod = request.form.get("pod")
-    eta_pod_date = request.form.get("eta_pod_date")
+    eta_pod = request.form.get("eta_pod")
     vessel = request.form.get("vessel")
     vovage = request.form.get("vovage")
     transit_days = request.form.get("transit_days")
 
     client[DB_NAME].schedule.insert_one({
-        "eta_pol_date": datetime.datetime.strptime(eta_pol_date, "%Y-%m-%d"),
+        "eta_pol": datetime.datetime.strptime(eta_pol, "%Y-%m-%d"),
         "pol": pol,
         "pod": pod,
-        "eta_pod_date": datetime.datetime.strptime(eta_pod_date, "%Y-%m-%d"),
+        "eta_pod": datetime.datetime.strptime(eta_pod, "%Y-%m-%d"),
         "vessel": vessel,
         "vovage": vovage,
         "transit_days": transit_days
@@ -50,6 +51,39 @@ def schedule_create_process():
     flash(f"New schedule '{vessel} V.{vovage}' has been created")
     return redirect(url_for("home"))
 
+
+@app.route("/schedule/update/<id>")
+def schedule_update_form(id):
+    schedule = client[DB_NAME].schedule.find_one({
+        "_id": ObjectId(id)
+    })
+    return render_template("schedule_update.template.html", schedule=schedule)
+
+@app.route("/schedule/update/<id>", methods=["POST"])
+def schedule_update_process(id):
+    eta_pol = request.form.get("eta_pol")
+    pol = request.form.get("pol")
+    pod = request.form.get("pod")
+    eta_pod = request.form.get("eta_pod")
+    vessel = request.form.get("vessel")
+    vovage = request.form.get("vovage")
+    transit_days = request.form.get("transit_days")
+
+    client[DB_NAME].schedule.update_one({
+        "_id": ObjectId(id)
+    }, {
+        "$set": {
+            "eta_pol": datetime.datetime.strptime(eta_pol, "%Y-%m-%d"),
+            "pol": pol,
+            "pod": pod,
+            "eta_pod": datetime.datetime.strptime(eta_pod, "%Y-%m-%d"),
+            "vessel": vessel,
+            "vovage": vovage,
+            "transit_days": transit_days
+        }
+    })
+    flash(f"'{vessel} V.{vovage}' has been updated")
+    return redirect(url_for("home"))
 
 # "magic code" -- boilerplate
 if __name__ == '__main__':
