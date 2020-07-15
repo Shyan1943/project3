@@ -41,15 +41,30 @@ To run a backend Python file, type `python3 app.py`, if Python file is named `ap
 A blue button should appear to click: *Make Public*,
 Another blue button should appear to click: *Open Browser*.
 
-### 8. Start create `@app.route("/schedule/create")` & template.html for "C" Creation
+### 8. "C"RUD = Create function & template
+```
+To insert a document into the collection use `<database>.<collection>.insert_one()`
+```
 
-### 9. import dateime, Python strptime()
-```datetime.datetime.strptime(date, "%Y-%m-%d")```
-
-### 10. create home `@app.route("/")` & template.html for "R" Reading
+### 9. C"R"UD = Reading function & template
 Using <a href="https://getbootstrap.com/docs/4.4/content/tables/">Bootstrap Table</a> to show the schedule list, added Create button at the home page to bring external user to the create form page. Also, use of Flask `redirect` to bring external user back to the home page. 
 
-## 11. Flash Messages 
+### 10. CR"U"D = Update function & template
+```
+a) import `from bson.objectid import ObjectId` at app.py
+b) Getting a single document use `<database>.<collection>.find_one()`
+c) use `"$set":` for pymongo 
+```
+
+### 11. CRU"D" = Delete function & template
+```
+To delete a document use `<database>.<collection>.remove()`
+```
+
+### 12. import dateime, Python strptime()
+```datetime.datetime.strptime(date, "%Y-%m-%d")```
+
+### 13. Flash Messages 
 ```
 11.a) import flash messages
 11.b) Session Key generated from https://randomkeygen.com/
@@ -70,11 +85,6 @@ Using <a href="https://getbootstrap.com/docs/4.4/content/tables/">Bootstrap Tabl
     {%endwith%}
 ```
 
-## 12. CR"U"D = Update 
-```
-a) import `from bson.objectid import ObjectId` at app.py
-
-```
 
 
 

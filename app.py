@@ -59,6 +59,7 @@ def schedule_update_form(id):
     })
     return render_template("schedule_update.template.html", schedule=schedule)
 
+
 @app.route("/schedule/update/<id>", methods=["POST"])
 def schedule_update_process(id):
     eta_pol = request.form.get("eta_pol")
@@ -85,7 +86,23 @@ def schedule_update_process(id):
     flash(f"'{vessel} V.{vovage}' has been updated")
     return redirect(url_for("home"))
 
-# "magic code" -- boilerplate
+
+@app.route("/schedule/delete/<id>")
+def schedule_delete_form(id):
+    schedule = client[DB_NAME].schedule.find_one({
+        "_id": ObjectId(id)
+    })
+    return render_template("schedule_delete_form.template.html", schedule=schedule)
+
+
+@app.route("/schedule/delete/<id>", methods=["POST"])
+def schedule_delete_process(id):
+    client[DB_NAME].schedule.remove({
+        "_id": ObjectId(id)
+    })
+    return redirect(url_for("home"))
+
+    # "magic code" -- boilerplate
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),

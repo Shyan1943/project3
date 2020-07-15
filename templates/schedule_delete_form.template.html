@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends "layout.template.html" %}
+
+{% block title %}Confirm delete?{% endblock %}
+
+{% block content %}
+<div class="alert alert-danger">
+    <form method="POST">
+        Are you sure you want to delete {{schedule.vessel}} V.{{schedule.vovage}}?
+        <div>
+            <input type="submit" class="btn btn-danger" value="Confirm"/>
+            <a href="{{url_for('home')}}" class="btn btn-primary">No, Thanks</a>
+        </div>    
+    </form>
+</div>
+{% endblock%}

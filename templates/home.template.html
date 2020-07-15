@@ -32,6 +32,7 @@
         <td>Book</td>
         <td>
             <a href="{{url_for('schedule_update_form', id=s._id)}}" class="btn btn-primary btn-sm">Edit</a>
+            <a href="{{url_for('schedule_delete_form', id=s._id)}}" class="btn btn-danger btn-sm">Delete</a>
         </td>
       </tr>
     {% endfor %}
