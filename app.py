@@ -10,8 +10,10 @@ load_dotenv()
 app = Flask(__name__)
 
 MONGO_URI = os.environ.get("MONGO_URI")
-client = pymongo.MongoClient(MONGO_URI)
+CLOUD_NAME = os.environ.get("CLOUD_NAME")
+UPLOAD_PRESET = os.environ.get("UPLOAD_PRESET")
 
+client = pymongo.MongoClient(MONGO_URI)
 DB_NAME = "pro3"
 
 SESSION_KEY = os.environ.get("SESSION_KEY")
@@ -120,6 +122,11 @@ def schedule_delete_process(id):
     flash("One schedule has been deleted")
     return redirect(url_for("home"))
 
+@app.route("/profile/upload")
+def profile_upload():
+    return render_template("profile_upload.template.html", 
+                            cloud_name=CLOUD_NAME,
+                            upload_preset=UPLOAD_PRESET)
 
     # "magic code" -- boilerplate
 if __name__ == '__main__':
