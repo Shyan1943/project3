@@ -2,6 +2,11 @@
 {% extends "layout.template.html" %} 
 {% block title %}Home{% endblock %} 
 {% block content %}
+<form class="form-inline mb-3" method="GET">
+    <input type="text" class="form-control" name="search_pol" placeholder="Port Of Loading"/>
+    <input type="text" class="form-control ml-1" name="search_pod" placeholder="Port Of Discharge"/>
+    <input type="submit" class="form-control ml-3" value="search"/>
+</form>
 <div class="table-responsive-lg">
   <table class="table table-striped table-bordered table-hover table-sm">
     <thead class="thead-dark">

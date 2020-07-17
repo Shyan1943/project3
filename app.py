@@ -20,7 +20,24 @@ app.secret_key = SESSION_KEY
 
 @app.route("/")
 def home():
-    schedules = client[DB_NAME].schedule.find()
+    search_pol = request.args.get("search_pol")
+    search_pod = request.args.get("search_pod")
+
+    criteria = {}
+
+    if search_pol != "" and search_pol is not None :
+        criteria["pol"] = {
+            "$regex": search_pol,
+            "$options": "i"
+        }
+    
+    if search_pod != "" and search_pod is not None :
+        criteria["pod"] = {
+            "$regex": search_pod,
+            "$options": "i"
+        }
+
+    schedules = client[DB_NAME].schedule.find(criteria)
     return render_template("home.template.html", schedules=schedules)
 
 
@@ -102,6 +119,7 @@ def schedule_delete_process(id):
     })
     flash("One schedule has been deleted")
     return redirect(url_for("home"))
+
 
     # "magic code" -- boilerplate
 if __name__ == '__main__':

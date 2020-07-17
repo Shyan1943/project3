@@ -84,6 +84,12 @@ To delete a document use `<database>.<collection>.remove()`
         {%endif%}
     {%endwith%}
 ```
+### 14. Search function
+1. NOTE : method is GET
+2. HTML : Use <a href="https://getbootstrap.com/docs/4.0/components/forms/#inline-forms">Bootstrap 4 Inline Forms</a>
+3. app.py : added coding 
+4. Use of `"$regex"` Regular Expression forms a search pattern.
+5. Use of `"$options": "i"` to carry out search without considering upper or lower case. 
 
 
 
