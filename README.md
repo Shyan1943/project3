@@ -53,28 +53,26 @@ To insert a document into the collection use `<database>.<collection>.insert_one
 Using <a href="https://getbootstrap.com/docs/4.4/content/tables/">Bootstrap Table</a> to show the schedule list, added Create button at the home page to bring external user to the create form page. Also, use of Flask `redirect` to bring external user back to the home page. 
 
 #### 10. CR"U"D = Update function & template
-```
-a) import `from bson.objectid import ObjectId` at app.py
-b) Getting a single document use `<database>.<collection>.find_one()`
-c) use `"$set":` for pymongo 
-```
+* Import `from bson.objectid import ObjectId` at `app.py`
+* Getting a single document use `<database>.<collection>.find_one()`
+* Use `"$set":` for pymongo 
+
 
 #### 11. CRU"D" = Delete function & template
 To delete a document use `<database>.<collection>.remove()`
 
-#### 12. import dateime, Python strptime()
+#### 12. import datetime, Python strptime()
 ```datetime.datetime.strptime(date, "%Y-%m-%d")```
 
 #### 13. Flash Messages 
-```
-11.a) import flash messages
-11.b) Session Key generated from https://randomkeygen.com/
-11.c) save the Session Key in the environment variables file 
-11.d) save & restart server `python3 app.py`
-11.e) read in the SESSION_KEY variable from the operating system environment `SESSION_KEY = os.environ.get('SESSION_KEY')`
-11.f) set the session Key `app.secret_key = SESSION_KEY`
-11.g) In the layout.template.html add in the code to display the flash messages:
-
+* Import Flash `from flask import flash` at `app.py` file
+* Generate Session Key from https://randomkeygen.com/
+* Save the Session Key in the `.env` file 
+* Save & restart server `python3 app.py`
+* Read in the SESSION_KEY variable from the operating system environment `SESSION_KEY = os.environ.get('SESSION_KEY')`
+* Set the session Key `app.secret_key = SESSION_KEY`
+* In the `layout.template.html` add in the code to display the flash messages:
+    ```
     {% with messages = get_flashed_messages() %}
         {% if messages %}
             {% for m in messages %}
@@ -84,30 +82,27 @@ To delete a document use `<database>.<collection>.remove()`
             {% endfor %}
         {%endif%}
     {%endwith%}
-```
+    ```
 
 #### 14. Search function
-```
-a) NOTE : method is GET
-b) HTML : Use <a href="https://getbootstrap.com/docs/4.0/components/forms/#inline-forms">Bootstrap 4 Inline Forms</a>
-c) app.py : added coding 
-d) Use of `"$regex"` Regular Expression forms a search pattern.
-e) Use of `"$options": "i"` to carry out search without considering upper or lower case.
-``` 
+* NOTE : method is GET
+* HTML : Use <a href="https://getbootstrap.com/docs/4.0/components/forms/#inline-forms">Bootstrap 4 Inline Forms</a>
+* app.py : added coding 
+* Use of `"$regex"` Regular Expression forms a search pattern.
+* Use of `"$options": "i"` to carry out search without considering upper or lower case.
 
 #### 15. "C"RUD = Upload profile image for advertisement 
-~~~
-a) Sign up <a href="https://cloudinary.com/users/login">Cloudinary</a>
-b) Save the could name & the upload preset in `.env` file. 
-c) Retrieve the cloud name and the upload preset from the .env file in the Flask app
+* Sign up <a href="https://cloudinary.com/users/login">Cloudinary</a>
+* Save the could name & the upload preset in `.env` file. 
+* Retrieve the cloud name and the upload preset from the .env file in the Flask app
     ```
     CLOUD_NAME = os.environ.get("CLOUD_NAME")
     UPLOAD_PRESET = os.environ.get("UPLOAD_PRESET")
     ```
-d) Run server `python3 app.py` again
-e) Create `@app.route("/profile/upload")` for view route
-f) Create `profile_upload.template.html` 
-g) Pass the cloud name and the upload preset to the Upload Widget script
+* Run server `python3 app.py` again
+* Create `@app.route("/profile/upload")` for view route
+* Create `profile_upload.template.html` 
+* Pass the cloud name and the upload preset to the Upload Widget script
     ```
     <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script> 
     
@@ -126,4 +121,24 @@ g) Pass the cloud name and the upload preset to the Upload Widget script
         }, false);
     </script>
     ```
-~~~
+* Setup a `<form method="POST">` to capture the uploaded image url
+    ```
+    <div>
+        <a id="upload_widget" class="cloudinary-button mt-3">Upload Image</a>
+        <input type="hidden" id="uploaded_image_url" name="uploaded_image_url"/>
+    </div>
+    ```
+* Change the JavaScript to put in the image url into the hidden form field
+    ```
+    let myWidget = cloudinary.createUploadWidget({
+        cloudName: '{{cloud_name}}', 
+        uploadPreset: '{{upload_preset}}'}, (error, result) => { 
+            if (!error && result && result.event === "success") { 
+            console.log('Done! Here is the image info: ', result.info); 
+            let fileURL = document.querySelector("#uploaded_image_url");
+            fileURL.value = result.info.url;
+            }
+        }
+    )
+    ```
+* Process the form and save its data to Mongo

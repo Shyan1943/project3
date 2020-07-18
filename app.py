@@ -27,13 +27,13 @@ def home():
 
     criteria = {}
 
-    if search_pol != "" and search_pol is not None :
+    if search_pol != "" and search_pol is not None:
         criteria["pol"] = {
             "$regex": search_pol,
             "$options": "i"
         }
-    
-    if search_pod != "" and search_pod is not None :
+
+    if search_pod != "" and search_pod is not None:
         criteria["pod"] = {
             "$regex": search_pod,
             "$options": "i"
@@ -122,11 +122,25 @@ def schedule_delete_process(id):
     flash("One schedule has been deleted")
     return redirect(url_for("home"))
 
+
 @app.route("/profile/upload")
 def profile_upload():
-    return render_template("profile_upload.template.html", 
-                            cloud_name=CLOUD_NAME,
-                            upload_preset=UPLOAD_PRESET)
+    return render_template("profile_upload.template.html",
+                           cloud_name=CLOUD_NAME,
+                           upload_preset=UPLOAD_PRESET)
+
+
+@app.route("/profile/upload", methods=["POST"])
+def profile_upload_process():
+    uploaded_image_url = request.form.get("uploaded_image_url")
+    description = request.form.get("description")
+    client[DB_NAME].profile.insert_one({
+        "uploaded_image_url": uploaded_image_url,
+        "description": description
+    })
+    flash("profile created!!")
+    return render_template(url_for("home"))
+
 
     # "magic code" -- boilerplate
 if __name__ == '__main__':
