@@ -40,7 +40,10 @@ def home():
         }
 
     schedules = client[DB_NAME].schedule.find(criteria)
-    return render_template("home.template.html", schedules=schedules)
+    images = client[DB_NAME].profile.find()
+    return render_template("home.template.html",
+                           schedules=schedules,
+                           images=images)
 
 
 @app.route("/schedule/create")
@@ -139,7 +142,7 @@ def profile_upload_process():
         "description": description
     })
     flash("profile created!!")
-    return render_template(url_for("home"))
+    return redirect(url_for("home"))  
 
 
     # "magic code" -- boilerplate

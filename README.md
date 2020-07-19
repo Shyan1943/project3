@@ -91,7 +91,7 @@ To delete a document use `<database>.<collection>.remove()`
 * Use of `"$regex"` Regular Expression forms a search pattern.
 * Use of `"$options": "i"` to carry out search without considering upper or lower case.
 
-#### 15. "C"RUD = Upload profile image for advertisement 
+#### 15. "C"RUD = Upload profile image for advertisement ('ads')
 * Sign up <a href="https://cloudinary.com/users/login">Cloudinary</a>
 * Save the could name & the upload preset in `.env` file. 
 * Retrieve the cloud name and the upload preset from the .env file in the Flask app
@@ -142,3 +142,7 @@ To delete a document use `<database>.<collection>.remove()`
     )
     ```
 * Process the form and save its data to Mongo
+
+#### 16. C"R"UD = Reading function for Uploaded profile ads image & description 
+* <a href="https://getbootstrap.com/docs/4.1/components/card/"></a>Bootstrap 4 Cards</a>
+* Using the grid, wrap cards in columns and rows.
