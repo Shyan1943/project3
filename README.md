@@ -146,3 +146,21 @@ To delete a document use `<database>.<collection>.remove()`
 #### 16. C"R"UD = Reading function for Uploaded profile ads image & description 
 * <a href="https://getbootstrap.com/docs/4.1/components/card/"></a>Bootstrap 4 Cards</a>
 * Using the grid, wrap cards in columns and rows.
+
+#### 17. CR"U"D = Update function for profile ads 
+* Import `from bson.objectid import ObjectId` at `app.py`
+* Getting a single document use `<database>.<collection>.find_one()`
+* Use `"$set":` for pymongo 
+
+#### 18. CRU"D" = 
+
+### C) PUBLICATION
+* Sign up for a <a href="https://www.heroku.com">Heroku</a> account
+* At Gitpod terminal : 
+    * log into Heroku using  `heroku login`
+    * create a new app  `heroku create <app_name>` 
+    * add new remote `git remote -v`
+    * to can run Python web applications that implement the application interface `pip3 install gunicorn`
+* At the folder, create a new file `Procfile`
+* Save `web gunicorn <your python file name without .py>:app` inside the `Procfile`file
+* At Gitpod terminal : create requirements file `pip3 freeze --local > requirements.txt`

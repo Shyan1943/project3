@@ -142,7 +142,18 @@ def profile_upload_process():
         "description": description
     })
     flash("profile created!!")
-    return redirect(url_for("home"))  
+    return redirect(url_for("home"))
+
+
+@app.route("/profile/update/<id>")
+def profile_update_form(id):
+    profile = client[DB_NAME].profile.find_one({
+        "_id": ObjectId(id)
+    })
+    return render_template("profile_update.template.html",
+                           profile=profile,
+                           cloud_name=CLOUD_NAME,
+                           upload_preset=UPLOAD_PRESET)
 
 
     # "magic code" -- boilerplate
