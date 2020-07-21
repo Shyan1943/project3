@@ -163,4 +163,16 @@ To delete a document use `<database>.<collection>.remove()`
     * to can run Python web applications that implement the application interface `pip3 install gunicorn`
 * At the folder, create a new file `Procfile`
 * Save `web gunicorn <your python file name without .py>:app` inside the `Procfile`file
-* At Gitpod terminal : create requirements file `pip3 freeze --local > requirements.txt`
+* At Gitpod terminal : 
+    * create requirements file `pip3 freeze --local > requirements.txt`
+    * `git add .`
+    * commit everything `git commit -m "<Commit Message>"`
+    * push to heroku using `git push heroku master`
+* Go the <a href="https://www.heroku.com">Heroku</a> Site :
+    * click on your project 
+    * ciick on Setting
+    * click on Reveal Config Vars
+    * save all your environment variables (in .env file) into Reveal Config Vars 
+    * at the top left, cilck on "Open App" 
+* Done publication!!
+
