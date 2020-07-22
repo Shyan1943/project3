@@ -154,6 +154,17 @@ To delete a document use `<database>.<collection>.remove()`
 
 #### 18. CRU"D" = 
 
+#### 19. Static CCS 
+* To create & link the style.css file
+    * At the folder, create a new folder `static`
+    * At the `static` folder, create a new file `style.css`
+    * Inside `<head>` of `layout.template.html`, added `<link rel="stylesheet" href="/static/style.css"/>`
+    * run `python3 app.py` for testing
+
+
+
+#### 20. API = 
+
 ### C) PUBLICATION
 * Sign up for a <a href="https://www.heroku.com">Heroku</a> account
 * At Gitpod terminal : 
