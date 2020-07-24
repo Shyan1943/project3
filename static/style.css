@@ -1,15 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
 
 body {
-    background-color: #508593;
-    font-family: 'Open Sans', sans-serif;
+    background-color: #f2d2ec;
+    font-family: "Open Sans", sans-serif;
+    height: 100%;
 }
 
 h1 {
-    color:#544f63;
+    color: #544f63;
 }
 
 .navbar-light {
     background-color: #f2d2ec;
 }
 
+/* Landing page (Hero image) */
+#homepage_img { 
+    padding-top: 120px;
+    height: 550px;
+    width: 100%;
+    object-fit: cover;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(image/hero.jpg);
+}
