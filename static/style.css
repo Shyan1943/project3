@@ -1,11 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
 
 body {
     background-color: #508593;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
 }
 
 h1 {
     color:#544f63;
 }
+
+.navbar-light {
+    background-color: #f2d2ec;
+}
+

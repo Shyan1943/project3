@@ -160,8 +160,8 @@ To delete a document use `<database>.<collection>.remove()`
     * At the `static` folder, create a new file `style.css`
     * Inside `<head>` of `layout.template.html`, added `<link rel="stylesheet" href="/static/style.css"/>`
     * run `python3 app.py` for testing
-* Import <a href="https://fonts.google.com/specimen/Open+Sans?category=Sans+Serif&sidebar.open&selection.family=Open+Sans"></a>Google Font</a>
-
+* Import <a href="https://fonts.google.com/specimen/Open+Sans?category=Sans+Serif&selection.family=Open+Sans:wght@600&sidebar.open=true">Google Font</a>
+* Added <a href="https://getbootstrap.com/docs/4.0/components/navbar/">Bootstrap fixed top navigation bar</a>
 
 
 #### 20. API = 
