@@ -1,24 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
 
 body {
-    background-color: #f2d2ec;
+    background-color: #508593;
     font-family: "Open Sans", sans-serif;
     height: 100%;
 }
 
-h1 {
-    color: #544f63;
+h1, label {
+    color: #eeeeee;
+}
+
+.btn {
+    color: #508993;
+    background-color: #f2d2ec;
+    border-color: #f2d2ec;
+}
+
+.btn.btn-danger {
+    color: #f2d2ec;
+    background-color: #508593;
+    border-color: #508593;
+}
+
+div.container {
+    padding-top: 30px;    
 }
 
 .navbar-light {
-    background-color: #f2d2ec;
+    background-color: #eeeeee;
 }
 
 /* Landing page (Hero image) */
 #homepage_img { 
-    padding-top: 120px;
     height: 550px;
     width: 100%;
     object-fit: cover;
     background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(image/hero.jpg);
+}
+
+.d-lg-flex {
+    padding-top: 20rem;
+}
+
+#upload_widget {
+    width: 100%;
+    height: 18rem;
 }

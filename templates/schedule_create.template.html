@@ -4,35 +4,37 @@
 {% block title %}Create New Schedule{% endblock %}
 
 {% block content %}
-<form method="POST">
-	<div>
-        <label>ETA POL :</label>
-        <input type="date" class="form-control" name="eta_pol"/>
-    </div>
-    <div>
-        <label>POL :</label>
-        <input type="text" class="form-control" name="pol"/>
-    </div>
-    <div>
-        <label>POD :</label>
-        <input type="text" class="form-control" name="pod"/>
-    </div>
-    <div>
-        <label>ETA POD :</label>
-        <input type="date" class="form-control" name="eta_pod"/>
-    </div>
-    <div>
-        <label>Vessel :</label>
-        <input type="text" class="form-control" name="vessel"/>
-    </div>
-    <div>
-        <label>Vovage :</label>
-        <input type="text" class="form-control" name="vovage"/>
-    </div>
-    <div>
-        <label>Transit Days :</label>
-        <input type="text" class="form-control" name="transit_days"/>
-	</div>
-    <input type="submit" class="btn btn-primary mt-3" value="Create"/>
-</form>
+<div class="container">
+    <form method="POST">
+        <div>
+            <label>ETA POL :</label>
+            <input type="date" class="form-control" name="eta_pol"/>
+        </div>
+        <div>
+            <label>POL :</label>
+            <input type="text" class="form-control" name="pol"/>
+        </div>
+        <div>
+            <label>POD :</label>
+            <input type="text" class="form-control" name="pod"/>
+        </div>
+        <div>
+            <label>ETA POD :</label>
+            <input type="date" class="form-control" name="eta_pod"/>
+        </div>
+        <div>
+            <label>Vessel :</label>
+            <input type="text" class="form-control" name="vessel"/>
+        </div>
+        <div>
+            <label>Vovage :</label>
+            <input type="text" class="form-control" name="vovage"/>
+        </div>
+        <div>
+            <label>Transit Days :</label>
+            <input type="text" class="form-control" name="transit_days"/>
+        </div>
+        <input type="submit" class="btn btn-outline-info mt-3" value="Create"/>
+    </form>
+</div>
 {% endblock %}
