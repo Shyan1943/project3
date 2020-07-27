@@ -37,4 +37,25 @@
         <input type="submit" class="btn btn-outline-info mt-3" value="Create"/>
     </form>
 </div>
+
+<div class="container">
+    <div class="row">
+        {% for i in images %}
+        <div class="col-sm-3 ml-3">
+            <div class="card">        
+                <img class="card-img-top" src="{{i.uploaded_image_url}}" alt="Member Company name"/>
+                <div class="card-body">
+                    <h5 class="card-title">WM Group</h5>
+                    <p class="card-text">{{i.description}}</p>
+                    <div class="d-lg-flex align-items-end">
+                        <a href="http://www.wmgroup.com.sg" class="btn btn-primary btn-sm">Website</a>
+                        <a href="#" class="btn btn-primary btn-sm">Edit</a>
+                        <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                    </div>
+                </div> 
+            </div>
+        </div>           
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}
