@@ -4,13 +4,16 @@
 {% block title %}Confirm delete?{% endblock %}
 
 {% block content %}
-<div class="alert alert-danger">
-    <form method="POST">
-        Are you sure you want to delete {{schedule.vessel}} V.{{schedule.vovage}}?
-        <div>
-            <input type="submit" class="btn btn-danger" value="Confirm"/>
-            <a href="{{url_for('home')}}" class="btn btn-primary">No, Thanks</a>
-        </div>    
-    </form>
+<div class="container">
+<h1>Delete schedule</h1>
+    <div class="alert alert-danger">
+        <form method="POST">
+            Are you sure you want to delete {{schedule.vessel}} V.{{schedule.vovage}}?
+            <div>
+                <input type="submit" class="btn delete btn-danger mt-3" value="Confirm"/>
+                <a href="{{url_for('home')}}" class="btn delete mt-3">No, Thanks</a>
+            </div>    
+        </form>
+    </div>
 </div>
 {% endblock%}

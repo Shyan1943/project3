@@ -5,20 +5,32 @@ body {
     font-family: "Open Sans", sans-serif;
 }
  
-h1, label {
+h1 {
+    color: #eeeeee;
+    margin-bottom: 3rem;
+}
+
+label {
     color: #eeeeee;
 }
 
-.btn {
+.btn, #search_btn {
     color: #508993;
     background-color: #f2d2ec;
     border-color: #f2d2ec;
 }
 
-.btn.btn-danger {
+.btn:hover, #search_btn:hover {
     color: #f2d2ec;
-    background-color: #508593;
-    border-color: #508593;
+    background-color: #508993;
+    border-color: #508993;
+    box-shadow: 20px 20px 40px 0px #f2d2ec;
+    font-size: 150%;
+}
+
+.form-control:hover {
+    font-size: 150%;
+    box-shadow: 20px 20px 40px 0px #f2d2ec;
 }
 
 div.container {
@@ -27,6 +39,20 @@ div.container {
 
 .navbar-light {
     background-color: #eeeeee;
+}
+
+.navbar-brand:hover, .nav-link:hover, .dropdown-item:hover {
+    color: #508993 !important;
+    font-size: 150%;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: #f2d2ec;
+    font-size: 150%;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
 }
 
 /* Landing page (Hero image) */
@@ -51,6 +77,11 @@ div.container {
     margin: 3rem;
 }
 
+.card:hover {
+    height: 90%;
+    box-shadow: 20px 20px 40px 0px rgba(0,0,0,0.5);
+}
+
 .card-img-top {
     height: 8rem;
 }
@@ -68,12 +99,62 @@ div.container {
     height: 2.8rem;
 }
 
-.table-responsive-lg {
-    background-color: #eeeeee !important;
-
+.fa-pencil-square-o {
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
+.fa-internet-explorer, .fa-pencil-square-o {
+    color: #508593;
+}
+
+.fa-trash {
+    color: #f2d2ec;
+}
+
+.fa:hover {
+    font-size: 200%;
+}
+
+.table-responsive-lg {
+    background-color: #eeeeee !important;
+}
+
+.table tbody tr:hover td, .table tbody tr:hover th {
+    font-size: 150%;
+}
+
+/* Schedule upload page */
 #upload_widget {
     width: 100%;
     height: 18rem;
+}
+
+#upload_widget:hover {
+    color: #f2d2ec;
+}
+
+
+#upload_widget.p {
+    font-size: 2vw;
+}
+
+.fa-picture-o {
+    size: 4rem;
+    margin-top: 4rem;
+}
+
+/* Delete Schedule */
+.alert-danger {
+    background-color: #eeeeee;
+
+}
+.delete.btn {
+    color:  #f2d2ec;
+    background:  #508593;
+}
+
+.delete.btn-danger {
+    color:  #508593;
+    background:  #f2d2ec;
 }

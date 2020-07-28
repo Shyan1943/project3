@@ -166,6 +166,7 @@ To delete a document use `<database>.<collection>.remove()`
 * Manage the "search function" layout, alignment and responsive variations by using <a href="https://getbootstrap.com/docs/4.1/utilities/flex/">.d-lg-flex</a>. 
 * Used of <a href="https://getbootstrap.com/docs/4.4/components/jumbotron/">Jumbotron</a> to extend the entire viewport at home page 
 * Fixed Ads Profile Card responsive by using <a href="https://getbootstrap.com/docs/4.0/utilities/spacing/">`mx-auto`</a> and <a href="https://getbootstrap.com/docs/4.3/components/card/">Bootscrap Card</a>
+* Used of <a href="https://fontawesome.com/v4.7.0/icons/">Font Awesome Icons</a> to represent accessibility standards
 
 #### 20. API = 
 
@@ -190,4 +191,12 @@ To delete a document use `<database>.<collection>.remove()`
     * save all your environment variables (in .env file) into Reveal Config Vars 
     * at the top left, cilck on "Open App" 
 * Done publication!!
+
+#### To update the Heroku deployed site 
+* At Gitpod terminal : 
+    * log into Heroku using  `heroku login`
+    * to remote `git remote -v`
+    * `git add .`
+    * commit everything `git commit -m "<Commit Message>"`
+    * push to heroku using `git push heroku master`
 

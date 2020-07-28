@@ -5,14 +5,17 @@
 <div class="container">
     <form method="POST">
         <div>
-            <a id="upload_widget" class="btn btn-outline-info">Upload Image</a>
-            <input type="hidden" id="uploaded_image_url" name="uploaded_image_url"/>
+            <a id="upload_widget" class="btn">
+                <input type="hidden" id="uploaded_image_url" name="uploaded_image_url"/>
+                <i class="fa fa-picture-o fa-5x d-lg-flex justify-content-center" aria-hidden="true"></i>
+                <p>Upload your profile image here</p>
+            </a>
         </div>
         <div>
             <textarea type="text" class="form-control mt-3" row="5" name="description" placeholder="Enter description"></textarea>
         </div>
         <div>
-            <input type="submit" class="btn btn-outline-info mt-3" value="Create a post"/>
+            <input type="submit" class="btn mt-3" value="Create a post"/>
         </div>
     </form>
 

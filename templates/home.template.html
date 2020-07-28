@@ -5,7 +5,7 @@
 	<form class="form-inline d-lg-flex mb-3 justify-content-center" method="GET">
 		<input type="text" class="form-control" name="search_pol" placeholder="Port Of Loading"/>
 		<input type="text" class="form-control ml-1" name="search_pod" placeholder="Port Of Discharge"/>
-		<input type="submit" class="form-control ml-3" value="search" onclick="window.location='#result'"/>
+		<input type="submit" class="form-control ml-3" value="search" id="search_btn" onclick="window.location='#result'"/>
     </form>
 </div>
 
@@ -20,15 +20,16 @@
 					<p class="card-text">{{i.description}}</p>
 				</div>
 				<div class="card-footer">
-					<a href="http://www.wmgroup.com.sg" class="btn btn-primary btn-sm">Website</a>
-					<a href="#" class="btn btn-primary btn-sm">Edit</a>
-					<a href="#" class="btn btn-danger btn-sm">Delete</a>
+					<a href="http://www.wmgroup.com.sg"><i class="fa fa-lg fa-internet-explorer" aria-hidden="true"></i></a>
+					<a href="http://www.wmgroup.com.sg"><i class="fa fa-lg fa-pencil-square-o" aria-hidden="true"></i></a>
+					<a href="#"><i class="fa fa-lg fa-trash" aria-hidden="true"></i></a>
 
 				</div>
 			</div>
 		</div>
 		{% endfor %}
-	</div>
+    </div>
+    <div class="text-center"><a href="{{url_for('profile_upload')}}" class="btn mt-4">Create a post</a></div>
 </div>
 
 <div id="result" class="jumbotron table-responsive-lg">
@@ -60,34 +61,13 @@
 				<td>Member</td>
 				<td>Book</td>
 				<td>
-					<a href="{{url_for('schedule_update_form', id=s._id)}}" class="btn btn-primary btn-sm">Edit</a>
-					<a href="{{url_for('schedule_delete_form', id=s._id)}}" class="btn btn-danger btn-sm">Delete</a>
+					<a href="{{url_for('schedule_update_form', id=s._id)}}"><i class="fa fa-lg fa-pencil-square-o" aria-hidden="true"></i></a>
+					<a href="{{url_for('schedule_delete_form', id=s._id)}}"><i class="fa fa-lg fa-trash" aria-hidden="true"></i></a>
 				</td>
 			</tr>
 			{% endfor %}
 		</tbody>
 	</table>
-	<a href="{{url_for('schedule_create_form')}}" class="btn btn-primary">Create Schedule</a>
+	<div class="text-center"><a href="{{url_for('schedule_create_form')}}" class="btn">Create Schedule</a></div>
 </div>
-
-<section>
-	<div class="row">
-		{% for i in images %}
-		<div class="col-sm-3 ml-3">
-			<div class="card">
-				<img class="card-img-top" src="{{i.uploaded_image_url}}" alt="Member Company name"/>
-				<div class="card-body">
-					<h5 class="card-title">WM Group</h5>
-					<p class="card-text">{{i.description}}</p>
-					<a href="http://www.wmgroup.com.sg" class="btn btn-primary btn-sm">Website</a>
-					<a href="#" class="btn btn-primary btn-sm">Edit</a>
-					<a href="#" class="btn btn-danger btn-sm">Delete</a>
-				</div>
-			</div>
-		</div>
-		{% endfor %}
-	</div>
-</section>
-
-
 {% endblock %}
