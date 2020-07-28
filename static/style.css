@@ -3,9 +3,8 @@
 body {
     background-color: #508593;
     font-family: "Open Sans", sans-serif;
-    height: 100%;
 }
-
+ 
 h1, label {
     color: #eeeeee;
 }
