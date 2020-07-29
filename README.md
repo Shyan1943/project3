@@ -151,8 +151,10 @@ To delete a document use `<database>.<collection>.remove()`
 * Import `from bson.objectid import ObjectId` at `app.py`
 * Getting a single document use `<database>.<collection>.find_one()`
 * Use `"$set":` for pymongo 
+* insert in JavaScript `document.querySelector("#updated_image").src = result.info.url;`
 
-#### 18. CRU"D" = 
+#### 18. CRU"D" = Delete function for profile ads 
+To delete a document use `<database>.<collection>.remove()`
 
 #### 19. Static CCS 
 * To create & link the style.css file
@@ -167,8 +169,7 @@ To delete a document use `<database>.<collection>.remove()`
 * Used of <a href="https://getbootstrap.com/docs/4.4/components/jumbotron/">Jumbotron</a> to extend the entire viewport at home page 
 * Fixed Ads Profile Card responsive by using <a href="https://getbootstrap.com/docs/4.0/utilities/spacing/">`mx-auto`</a> and <a href="https://getbootstrap.com/docs/4.3/components/card/">Bootscrap Card</a>
 * Used of <a href="https://fontawesome.com/v4.7.0/icons/">Font Awesome Icons</a> to represent accessibility standards
-
-#### 20. API = 
+* Used of `target="_blank"`to improve the UX, when user click on any link out (to another web site or social site), that opens a new window. 
 
 ### C) PUBLICATION
 * Sign up for a <a href="https://www.heroku.com">Heroku</a> account

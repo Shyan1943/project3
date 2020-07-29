@@ -1,41 +1,53 @@
 <!DOCTYPE html>
 {% extends "layout.template.html" %} 
-{% block title %}Profile Update{% endblock %} 
+{% block title %}Update Profile{% endblock %} 
 {% block content %}
 <div class="container">
+    <h1>Update profile</h1>
     <form method="POST">
-        <div class="card" style="width: 18rem;">        
-            <img class="card-img-top" src="{{profile.uploaded_image_url}}" id="uploaded_image" alt="Member Company name"/>
-            <div class="card-body">
-                <h5 class="card-title">WM Group</h5>
-                <input type="text card-text" class="form-control mt-3" name="description" value="{{profile.description}}"/>
-                <a id="upload_widget" class="btn btn-primary btn-sm">Edit Image</a>
+        <div>
+            <a id="upload_widget" class="btn">
                 <input type="hidden" id="uploaded_image_url" name="uploaded_image_url" value="{{profile.uploaded_image_url}}"/>
-                <a href="#" class="btn btn-primary btn-sm">Save</a>
-            </div> 
+                <img src="{{profile.uploaded_image_url}}" id="updated_image" class="img-fluid"/>
+            </a>
+        </div>
+        <div>
+            <input type="text" class="form-control mt-3" name="company_name" placeholder="Enter company name" value="{{profile.company_name}}"/>
+        </div>
+        <div>
+            <input type="text" class="form-control mt-3" name="website" placeholder="Enter website" value="{{profile.website}}"/>
+        </div>
+        <div>
+            <input type="text" class="form-control mt-3" name="description" placeholder="Enter description" value="{{profile.description}}"/>
+        </div>
+        <div>
+            <input type="submit" class="btn mt-3" value="Update post"/>
+            <a href="{{url_for('home')}}" class="btn mt-3">No, Thanks</a>
         </div>
     </form>
-<div class="container">
+{% endblock %}
 
-<script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>  
+{% block js %}
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>  
 
-<script type="text/javascript">  
-    let myWidget = cloudinary.createUploadWidget({
-        cloudName: '{{cloud_name}}', 
-        uploadPreset: '{{upload_preset}}'}, (error, result) => { 
-            if (!error && result && result.event === "success") { 
-            console.log('Done! Here is the image info: ', result.info); 
-            let fileURL = document.querySelector("#uploaded_image_url");
-            fileURL.value = result.info.url;
+    <script type="text/javascript">  
+        let myWidget = cloudinary.createUploadWidget({
+            cloudName: '{{cloud_name}}', 
+            uploadPreset: '{{upload_preset}}'}, (error, result) => { 
+                if (!error && result && result.event === "success") { 
+                console.log('Done! Here is the image info: ', result.info); 
+                let fileURL = document.querySelector("#uploaded_image_url");
+                fileURL.value = result.info.url;
 
-            document.querySelector('#uploaded_image').src = result.info.url;
+                document.querySelector("#updated_image").src = result.info.url;
 
+                }
             }
-        }
-    )
-    
-    document.getElementById("upload_widget").addEventListener("click", function(){
-        myWidget.open();
-    }, false);
-</script>
+        )
+        
+        document.getElementById("upload_widget").addEventListener("click", function(){
+            myWidget.open();
+        }, false);
+    </script>
+<div class="container">
 {% endblock %}

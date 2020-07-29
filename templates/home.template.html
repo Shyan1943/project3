@@ -21,15 +21,14 @@
 				</div>
 				<div class="card-footer">
 					<a href="{{i.website}}" target="_blank"><i class="fa fa-lg fa-internet-explorer" aria-hidden="true"></i></a>
-					<a href="#" target="_blank"><i class="fa fa-lg fa-pencil-square-o" aria-hidden="true"></i></a>
-					<a href="#" target="_blank"><i class="fa fa-lg fa-trash" aria-hidden="true"></i></a>
-
+					<a href="{{url_for('profile_update_form', id=i._id)}}"><i class="fa fa-lg fa-pencil-square-o" aria-hidden="true"></i></a>
+					<a href="{{url_for('profile_delete_form', id=i._id)}}"><i class="fa fa-lg fa-trash" aria-hidden="true"></i></a>
 				</div>
 			</div>
 		</div>
 		{% endfor %}
     </div>
-    <div class="text-center"><a href="{{url_for('profile_upload')}}" target="_blank" class="btn mt-4">Create a post</a></div>
+    <div class="text-center"><a href="{{url_for('profile_upload')}}" class="btn mt-4">Create a post</a></div>
 </div>
 
 <div>
@@ -66,14 +65,14 @@
                     <td>{{s.transit_days}}</td>
                     <td><a href="{{s.website}}" target="_blank">{{s.company_name}}</a></td>
                     <td>
-                        <a href="{{url_for('schedule_update_form', id=s._id)}}" target="_blank"><i class="fa fa-lg fa-pencil-square-o" aria-hidden="true"></i></a>
-                        <a href="{{url_for('schedule_delete_form', id=s._id)}}" target="_blank"><i class="fa fa-lg fa-trash" aria-hidden="true"></i></a>
+                        <a href="{{url_for('schedule_update_form', id=s._id)}}"><i class="fa fa-lg fa-pencil-square-o" aria-hidden="true"></i></a>
+                        <a href="{{url_for('schedule_delete_form', id=s._id)}}"><i class="fa fa-lg fa-trash" aria-hidden="true"></i></a>
                     </td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
-        <div class="text-center"><a href="{{url_for('schedule_create_form')}}" target="_blank" class="btn">Create Schedule</a></div>
+        <div class="text-center"><a href="{{url_for('schedule_create_form')}}" class="btn">Create Schedule</a></div>
     </div>
 </div>
 {% endblock %}

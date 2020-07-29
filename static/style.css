@@ -166,3 +166,8 @@ div.container {
     color:  #508593;
     background:  #f2d2ec;
 }
+
+/* Profile update */
+#updated_image {
+    height: 17rem;
+}

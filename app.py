@@ -171,7 +171,44 @@ def profile_update_form(id):
                            upload_preset=UPLOAD_PRESET)
 
 
-    # "magic code" -- boilerplate
+@app.route("/profile/update/<id>", methods=["POST"])
+def profile_update_process(id):
+    uploaded_image_url = request.form.get("uploaded_image_url")
+    description = request.form.get("description")
+    company_name = request.form.get("company_name")
+    website = request.form.get("website")
+    client[DB_NAME].profile.update_one({
+        "_id": ObjectId(id)
+    }, {
+        "$set": {
+            "uploaded_image_url": uploaded_image_url,
+            "description": description,
+            "company_name": company_name,
+            "website": website
+        }
+    })
+    flash(f"Your profile '{company_name}' has been updated")
+    return redirect(url_for("home"))
+
+
+@app.route("/profile/delete/<id>")
+def profile_delete_form(id):
+    profile = client[DB_NAME].profile.find_one({
+        "_id": ObjectId(id)
+    })
+    return render_template("profile_delete.template.html", profile=profile)
+
+
+@app.route("/profile/delete/<id>", methods=["POST"])
+def profile_delete_process(id):
+    company_name = request.form.get("company_name")
+    client[DB_NAME].profile.remove({
+        "_id": ObjectId(id)
+    })
+    flash("'{company_name}'profile has been deleted")
+    return redirect(url_for("home"))
+
+   # "magic code" -- boilerplate
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
