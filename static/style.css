@@ -14,13 +14,13 @@ label {
     color: #eeeeee;
 }
 
-.btn, #search_btn {
+.btn, input.search_btn {
     color: #508993;
     background-color: #f2d2ec;
     border-color: #f2d2ec;
 }
 
-.btn:hover, #search_btn:hover {
+.btn:hover, input.search_btn:hover {
     color: #f2d2ec;
     background-color: #508993;
     border-color: #508993;

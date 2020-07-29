@@ -46,6 +46,7 @@ def home():
                            images=images)
 
 
+# Schedule Session
 @app.route("/schedule/create")
 def schedule_create_form():
     return render_template("schedule_create.template.html")
@@ -60,6 +61,8 @@ def schedule_create_process():
     vessel = request.form.get("vessel")
     vovage = request.form.get("vovage")
     transit_days = request.form.get("transit_days")
+    company_name = request.form.get("company_name")
+    website = request.form.get("website")
 
     client[DB_NAME].schedule.insert_one({
         "eta_pol": datetime.datetime.strptime(eta_pol, "%Y-%m-%d"),
@@ -68,7 +71,9 @@ def schedule_create_process():
         "eta_pod": datetime.datetime.strptime(eta_pod, "%Y-%m-%d"),
         "vessel": vessel,
         "vovage": vovage,
-        "transit_days": transit_days
+        "transit_days": transit_days,
+        "company_name": company_name,
+        "website": website
     })
     flash(f"New schedule '{vessel} V.{vovage}' has been created")
     return redirect(url_for("home"))
@@ -91,6 +96,8 @@ def schedule_update_process(id):
     vessel = request.form.get("vessel")
     vovage = request.form.get("vovage")
     transit_days = request.form.get("transit_days")
+    company_name = request.form.get("company_name")
+    website = request.form.get("website")
 
     client[DB_NAME].schedule.update_one({
         "_id": ObjectId(id)
@@ -102,7 +109,9 @@ def schedule_update_process(id):
             "eta_pod": datetime.datetime.strptime(eta_pod, "%Y-%m-%d"),
             "vessel": vessel,
             "vovage": vovage,
-            "transit_days": transit_days
+            "transit_days": transit_days,
+            "company_name": company_name,
+            "website": website
         }
     })
     flash(f"'{vessel} V.{vovage}' has been updated")
@@ -114,7 +123,8 @@ def schedule_delete_form(id):
     schedule = client[DB_NAME].schedule.find_one({
         "_id": ObjectId(id)
     })
-    return render_template("schedule_delete_form.template.html", schedule=schedule)
+    return render_template("schedule_delete_form.template.html",
+                           schedule=schedule)
 
 
 @app.route("/schedule/delete/<id>", methods=["POST"])
@@ -126,6 +136,7 @@ def schedule_delete_process(id):
     return redirect(url_for("home"))
 
 
+# Profile Ads Session
 @app.route("/profile/upload")
 def profile_upload():
     return render_template("profile_upload.template.html",
@@ -137,9 +148,13 @@ def profile_upload():
 def profile_upload_process():
     uploaded_image_url = request.form.get("uploaded_image_url")
     description = request.form.get("description")
+    company_name = request.form.get("company_name")
+    website = request.form.get("website")
     client[DB_NAME].profile.insert_one({
         "uploaded_image_url": uploaded_image_url,
-        "description": description
+        "description": description,
+        "company_name": company_name,
+        "website": website
     })
     flash("profile created!!")
     return redirect(url_for("home"))
