@@ -67,6 +67,10 @@ div.container {
     padding-top: 20rem;
 }
 
+#homepage_img .form-control {
+    margin: 0.25rem;
+}
+
 .jumbotron {
     background-color: #508593;
 }
@@ -114,6 +118,10 @@ div.container {
 
 .fa:hover {
     font-size: 200%;
+}
+
+#result .form-control {
+    margin: 0.25rem;
 }
 
 .table-responsive-lg {
