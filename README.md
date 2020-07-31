@@ -103,7 +103,7 @@ Information required on the website to fulfill the content requirements.
 | " |	" |	CI8 |	"D" image and article section for profile advertisement session  |	
 
 #### Content Structure (CS)
-In these modern days, users are constantly bombarded with too much content, people love simplicity. With this, we design it as a "One-page websites" offer a fast and clear reading experience. Below is the IA Sitemap for landing page. 
+In these modern days, users are constantly bombarded with too much content, people love simplicity. With this, we design it as a "One-page websites" offer a fast and clear reading experience. The contents will be regroup into a sequential structure as below IA Sitemap for landing Page & overall. 
 
 <img src="static/image/IASitemap_LandingPage.png" align="left" width="130px" height="450px"/>
 
@@ -124,8 +124,8 @@ CI3.	"R" View Sailing schedule session
 CI5.	"C" + "U" sailing schedule button		
 CI6.	"D" sailing schedule button		
 ```
-The contents will be regroup into a sequential structure as below IA Sitemap.
-<img src="static/image/IASitemap_Overall.png" width="" height=""/>
+##### IA Sitemap (Overall)
+<img src="static/image/IASitemap_Overall.png"/>
 
 				
 
