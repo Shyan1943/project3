@@ -105,7 +105,7 @@ Information required on the website to fulfill the content requirements.
 #### Content Structure (CS)
 In these modern days, users are constantly bombarded with too much content, people love simplicity. With this, we design it as a "One-page websites" offer a fast and clear reading experience. The contents will be regroup into a sequential structure as below IA Sitemap for landing Page & overall. 
 
-<img src="static/image/IASitemap_LandingPage.png" align="left" width="130px" height="450px"/>
+<img src="static/image/IASitemap_LandingPage.png" align="left" width="130px" height="420px"/>
 
 ##### Landing Page :
 ```
@@ -157,7 +157,7 @@ CI6.	"D" sailing schedule button
 
 ## 4) SKELETON
 ### 4a) Interface design
-<img src="/static/image/skeleton_mainlayout.jpg" align="left" width="27%" height="22%">
+<img src="/static/image/skeleton_mainlayout.jpg" align="left" width="200px" height="130px">
 
 
 1. Each page will include two parts - header and main content to keep the consistency
