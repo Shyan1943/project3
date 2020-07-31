@@ -172,6 +172,26 @@ CI6.	"D" sailing schedule button
 #### Sitemap (C+U+D Page)
 <img src="/static/image/skeleton_CUDpage.jpg" width="60%" height="60%">
 			
+### 4b) Navigation design 
+If External User get lost, the navigation bar will point them in the right direction. Bootstrap component will be used to make the fixed-top navigation responsive.
+```
+Logo
+● Logo on every page, clicking on it will bring the visitor to the Home Page. [Bootstrap Component - Navbar] 
+
+Main Navigation
+● Main Navigation is a fixed position menu at the top of every web page. It designed for External User's convenience from one page to another easily. They are hyperlinked to their respective pages. There is hover function too, so users know its clickable when mouse over. [Bootstrap Component - Navbar] 
+
+Collapsible Hamburger Mobile Menu
+● The top navigation will be minimized into a hamburger menu when displayed in mobile screens or other small screens. Clicking on it will display the familiar 3 choices. [Bootstrap Component - Navbar] 
+
+Button for "Search", "Create" & "View all" 
+● Can easily get it from the navigation bar, which will point external users to the right direction. 
+
+Button for "Update" & "Delete"
+● Update & delete icon will be showed on every id object
+```
+#### Button for "Update" & "Delete"
+<img src="/static/image/skeleton_UDbutton.jpg" width="30%" height="30%"> 
 
 
 
