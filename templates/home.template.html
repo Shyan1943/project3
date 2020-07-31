@@ -1,39 +1,44 @@
 {% extends "layout.template.html" %}
 {% block title %}Home{% endblock %}
 {% block content %}
-<div id="homepage_img">
-    <form class="form-inline d-lg-flex mb-3 justify-content-center" method="GET">
-		<input type="text" class="form-control" name="search_pol" placeholder="Port Of Loading"/>
-		<input type="text" class="form-control" name="search_pod" placeholder="Port Of Discharge"/>
-		<input type="submit" class="form-control search_btn" value="search" onclick="window.location='#result'"/>
-    </form>
-    <h3>Let's join us to enjoy Free sailing schedule posting</h3>
-    <h3>and advertising company profile today!!!</h3>
-</div>
-
-<div class="jumbotron">
-	<div class="row">
-		{% for i in images %}
-		<div class="card-deck col-lg-2.5 mx-auto">
-			<div class="card" id="profile">
-				<img class="card-img-top" src="{{i.uploaded_image_url}}" alt="Member Company name"/>
-				<div class="card-body">
-					<a href="{{i.website}}" target="_blank"><h5 class="card-title">{{i.company_name}}</h5></a>
-					<p class="card-text">{{i.description}}</p>
-				</div>
-				<div class="card-footer">
-					<a href="{{i.website}}" target="_blank"><i class="fa fa-lg fa-internet-explorer" aria-hidden="true"></i></a>
-					<a href="{{url_for('profile_update_form', id=i._id)}}"><i class="fa fa-lg fa-pencil-square-o" aria-hidden="true"></i></a>
-					<a href="{{url_for('profile_delete_form', id=i._id)}}"><i class="fa fa-lg fa-trash" aria-hidden="true"></i></a>
-				</div>
-			</div>
-		</div>
-		{% endfor %}
+<main>
+    <div id="homepage_img">
+        <form class="form-inline d-lg-flex mb-3 justify-content-center" method="GET">
+            <input type="text" class="form-control" name="search_pol" placeholder="Port Of Loading"/>
+            <input type="text" class="form-control" name="search_pod" placeholder="Port Of Discharge"/>
+            <input type="submit" class="form-control search_btn" value="search" onclick="window.location='#result'"/>
+        </form>
+        <h3>Let's join us to enjoy Free sailing schedule posting</h3>
+        <h3>and advertising company profile today!!!</h3>
     </div>
-    <div class="text-center"><a href="{{url_for('profile_upload')}}" class="btn mt-4">Create a post</a></div>
-</div>
+</main>
 
-<div>
+<figure>
+    <div class="jumbotron">
+        <div class="row">
+            {% for i in images %}
+            <div class="card-deck col-lg-2.5 mx-auto">
+                <div class="card" id="profile">
+                    <img class="card-img-top" src="{{i.uploaded_image_url}}" alt="Member Company name"/>
+                    <div class="card-body">
+                        <a href="{{i.website}}" target="_blank"><h5 class="card-title">{{i.company_name}}</h5></a>
+                        <p class="card-text">{{i.description}}</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{{i.website}}" target="_blank"><i class="fa fa-lg fa-internet-explorer" aria-hidden="true"></i></a>
+                        <a href="{{url_for('profile_update_form', id=i._id)}}"><i class="fa fa-lg fa-pencil-square-o" aria-hidden="true"></i></a>
+                        <a href="{{url_for('profile_delete_form', id=i._id)}}"><i class="fa fa-lg fa-trash" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="text-center"><a href="{{url_for('profile_upload')}}" class="btn mt-4">Create a post</a></div>
+    </div>
+</figure>
+
+
+<section>
     <div id="result" class="jumbotron table-responsive-lg">
         <form class="form-inline d-lg-flex mb-3 justify-content-center" method="GET">
             <input type="text" class="form-control" name="search_pol" placeholder="Port Of Loading"/>
@@ -76,5 +81,5 @@
         </table>
         <div class="text-center"><a href="{{url_for('schedule_create_form')}}" class="btn">Create Schedule</a></div>
     </div>
-</div>
+</section>
 {% endblock %}

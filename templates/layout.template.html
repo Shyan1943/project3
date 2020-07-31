@@ -51,17 +51,19 @@
             </div>
         </header>
 
-    <div class="container">
-        {% with messages = get_flashed_messages() %}
-        {% if messages %}
-            {% for m in messages %}
-            <div class="alert alert-success">
-                {{m}}
+        <mark>
+            <div class="container">
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for m in messages %}
+                    <div class="alert alert-success">
+                        {{m}}
+                    </div>
+                    {% endfor %}
+                {% endif %}
+                {% endwith %}
             </div>
-            {% endfor %}
-        {% endif %}
-        {% endwith %}
-    </div>
+        </mark>
     
     {%block content%}{%endblock%}
 
