@@ -193,6 +193,22 @@ Button for "Update" & "Delete"
 #### Button for "Update" & "Delete"
 <img src="/static/image/skeleton_UDbutton.jpg" width="30%" height="30%"> 
 
+#### 4c) Information Design
+##### Platform Branding
+A brand is the set of expectations, memories, stories and relationships that, taken together, account for a consumer's decision to choose one product or service over another. Here are the key design elements we use to create a brand identity that is strong, consistent, and attractive. 
+
+      (CI1) High resolution Hero photo to be displayed 100% width at the home page, which can build an emotional connection with the External User.
+      (CI2) Clear brand purpose and positioning
+      (CI2) Memorable brand "YOUShip" also is created to make an impression.
+      (FR1) Good navigation is key to attracting the External User, show them we care about their feeling, even just a single movement on the webpage. We do not want them to get lost. 
+      (FR2) A Modern Responsive Web Design will tell External User that the platform is ahead of others, a free flexible and free advertisement Shipping platform
+            (CS) One-page websites
+            (FR2) Responsive design
+            (FR3) Searchable function
+            (FR4~FR6) CRUD for any members at zero cost
+      (5. Surface Color) Attractive color palette 
+      (5. Surface Font) Professional typography 
+      (5. Surface Image) A modern & energetic aesthetic image 
 
 
 
