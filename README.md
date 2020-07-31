@@ -155,7 +155,23 @@ CI6.	"D" sailing schedule button
       i.	there is clear conformity to accessibility guidelines across all pages/sections and in all interactivity
       ii.	The <a href="https://v4-alpha.getbootstrap.com/getting-started/accessibility/">aria-label attribute</a> is used to define a string that labels the current element, in cases where a text label is not visible on the screen. 
 
-				
+## 4) SKELETON
+### 4a) Interface design
+<img src="/static/image/skeleton_mainlayout.jpg" align="left" width="27%" height="22%">
+
+
+1. Each page will include two parts - header and main content to keep the consistency
+2. Header include sections that will be repeated all the pages to improve predictability and consistency.
+3. Fixed-top Header will include a logo and the main navigation 
+4. The main content section will display content related to the page.
+
+
+#### Sitemap (Landing Page)
+<img src="/static/image/skeleton_landingpage.jpg" width="60%" height="60%">
+
+#### Sitemap (C+U+D Page)
+<img src="/static/image/skeleton_CUDpage.jpg" width="60%" height="60%">
+			
 
 
 
