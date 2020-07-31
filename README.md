@@ -1,3 +1,88 @@
+# YOUShip
+View the live project <a href="https://shyan-tgc-pro3.herokuapp.com/" target="_blank">here</a>.
+
+This is an online shipping advertisement platform
+
+Purpose:
+* In this project, I build a full-stack site that allows users to manage a common dataset about a particular domain.
+
+Value provided:
+* Users make use of the site to share their own data with the community, and benefit from having convenient access to the data provided by all other members.
+* The site owner advances their own goals by providing this functionality, potentially by being a regular user themselves. The site owner also benefit from the collection of the dataset as a whole, make profit on the advertisement, posting inhouse sailing schedule & advertising inhouse branding as well.
+
+<img src="static/image/presentation.png" alt="landing page"/>
+
+
+
+# User Experience - User Interface (UX-UI)
+
+## 1) STRATEGY
+* External user’s goal: Find, share vessel schedule and advertise their company profile
+
+* Site owner's goal: Promote a brand of shipping advertisement platform
+
+* Target audience :
+```
+    ● Business to business
+    ● Shipper & Freight Forwarder
+```
+
+* Therefore, the platform should focus on:
+```
+    ● Design a front end for a full stack application following the principles of UX design which meets accessibility guidelines, is easy to navigate and allows the user to ﬁnd information and resources intuitively
+    ● Design a full stack application that lets the user initiate and control actions and gives immediate and full feedback on data processes
+    ● Implement a full stack application whose purpose is immediately evident to a new user and which provides a good solution to the user’s demands and expectations
+    ● All Create, Read, Update and Delete actions are immediately reﬂected in the user interface
+```
+
+## 2) SCOPE
+### Identifying External Users:
+* The primary purpose of this platform is to allow external users to share their own schedule data and advertise their branding with the community, and benefit from having convenient access to the data provided by all other members. The person may be the site owner, business owners or employees in shipping/freight forwarding industry (hereafter known as "Shipping company"),  or person in trading or manufacturer industry (hereafter known as "Shippers").
+
+### Identifying Site Owner:
+* The site owner advances their own goals by providing this functionality, potentially by being a regular external user themselves. The site owner also benefit from the collection of the dataset as a whole and advertisement sign up fee. 
+
+### 2a) User Stories 
+```
+    ● US1. As an external user, I want to get the information easily within few clicks, so that I can finish my task as much as possible. 
+    ● US2. As an external user, I want to visit a responsive website, so that I can complete my job at anytime anywhere easily without rely on computers.
+    ● US3. As an external user, I want to visit a good user interactive website, so that i feel it is a trustworthy website to working with.
+    ● US4. As an external user, I want to get the information easily within a particular domain, so that it save my memory & time. 
+    ● US5. As an external user, I want to have more choices on sailing schedule, so that I can meet the production & client' requirements easily.
+    ● US6. As an external user, I want to know more about the company who posted the schedule, so that I can make decision whether to contact the vendor.
+    ● US7. As an external user (Shipping company), I want to create, display, edit and delete my in-house sailing schedule within the particular domain, so that I can benefit from this website as well. 
+    ● US8. As an external user (Shipping company), I want to advertise my company profile on the platform, so that it help to develop a distinctive brand for my business and stand out from our competitors
+    ● US9. As an Site Onwer, I want to collect data information through this platform, so that I can develop it to other businesses in future. 
+    ● US10. As an Site Onwer, I want to have an advertisement sign up session, so that I can gain some returns on this platform. (Optional after its popular)
+```
+
+### 2b) Functional Requirement (FR)					
+| User Stories |	--> FR |	Functional Requirement (FR)  |			
+|     :---:    |     :---: |:---       |					
+| US1 |	--> FR1 |	Good Navigation that all resources are easy to find, allowing shippers to navigate the layout of the site intuitively.   |									
+| US4 |	--> FR2 |	Connect external users to different template to ensure requirements are fulfilled  |									
+| US5 |	--> FR3 |	Searchable sailing schedule   |									
+| US6 |	--> FR4 |	Allow external users to the view Shipping companies' website site & profile  |									
+| US7 |	--> FR5 |	Allow external users (Shipping companies) to add, update and delete their own sailing schedule   |									
+| US8 |	--> FR6 |	Allow external users (Shipping companies) to add, update and delete image or article for advertisement   |									
+| US9 |	--> FR7 |	A library for Site Onwer to collect data information through this platform "Backend"  |									
+| US10 |	--> FR8 |	Allow external users (Shipping companies) to sign up for the advestisement session (Optional)  |									
+		
+						
+### 2c) Content Requirement (CR)			
+| User Stories |	--> CR |	Content Requirement (CR)  |			
+|     :---:    |     :---: |:---       |			
+| US2 |	--> CR1 |	Responsive design  |	
+| US3 |	--> CR2 |	User interactions design  |	
+| US4 |	--> CR3 |	A short & quick introduction to attract more external users posting sailing & advertise their profile at this Platform  |	
+| US5 |	--> CR4 |	Sailing schedule section  |	
+| US7 |	--> CR5 |	CRUD sailing schedule section  |	
+| US8 |	--> CR6 |	CRUD image and article section for profile advertisement  |	
+| US10 |	--> CR7 |	(Optional) Sign up section for advertisement  |	
+
+
+
+
 ## Deployment 
 
 ### b) PRODUCTION

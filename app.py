@@ -205,7 +205,7 @@ def profile_delete_process(id):
     client[DB_NAME].profile.remove({
         "_id": ObjectId(id)
     })
-    flash("'{company_name}'profile has been deleted")
+    flash("Profile has been deleted")
     return redirect(url_for("home"))
 
    # "magic code" -- boilerplate
