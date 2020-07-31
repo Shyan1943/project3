@@ -124,8 +124,36 @@ CI3.	"R" View Sailing schedule section
 CI5.	"C" + "U" sailing schedule button		
 CI6.	"D" sailing schedule button		
 ```
-##### IA Sitemap (Overall)
+#### IA Sitemap (Overall)
 <img src="static/image/IASitemap_Overall.png"/>
+
+### 3b) Interaction Design      	
+#### Learnability	
+      i.	Different navigation are positions at the familiar location a web surfer, and throughout the website to enhance familiarity and consistency. (FR1)
+            a.	Logo that leads back to the home page
+            b.	navigation system in the form of site map allowing visitor to view all the sections at a glance
+            c.	a clear and unambiguous navigation structures <a href="http://www.flaskboilerplate.com/" target="_blank">fixed at the top</a>
+            d.	all resources on the site are easy to ﬁnd, allowing users to navigate the layout of the site intuitively
+      ii.	Button with hover effect will be used to indicate there's a link to the working project to increase the predictability.
+      iii.	<target="_blank"> was used to improve the UX, when user click on any link out (to another web site or social site), that opens a new window. Whereas when they're clicking on a link internal to a site that they remain within the same browser window
+#### Understandability	
+      i.	Content are group into logical order with short word or phrase title easily understandable 
+      ii.	Readability
+#### Operability	
+      i.	The visitors able to easily search the sailing schedule without encountering any issues. (FR3)
+      ii.	Allow visitors to the view Shipping companies' website site & profile (FR4)
+      iii.	Allow external users (Shipping companies) to add, update and delete their own sailing schedule (FR5)
+      iv.	Allow external users (Shipping companies) to add, update and delete image or article for advertisement (FR6)
+#### Attractiveness	
+      i.	Responsive design to take into consideration how it looks when on viewed on a desktop browsers as well as smaller screens like mobile phone. The layout will change to cater for different size of the device. (FR2)
+      ii.	Utilization of negative space between different sections and components of the page to increase readability
+#### Usability compliance	
+      i.	Semantic HTML to enhance code readability 
+      ii.	Rearrangement of the component 
+      iii.	Used of <a href="https://flask.palletsprojects.com/en/1.1.x/patterns/flashing/" target="_blank">Message Flashing</a> to give user feedback all the times. E.g :" the form has been created, updated or deleted."
+#### Accessibility	
+      i.	there is clear conformity to accessibility guidelines across all pages/sections and in all interactivity
+      ii.	The <a href="https://v4-alpha.getbootstrap.com/getting-started/accessibility/">aria-label attribute</a> is used to define a string that labels the current element, in cases where a text label is not visible on the screen. 
 
 				
 
