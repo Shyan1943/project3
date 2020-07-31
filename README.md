@@ -48,7 +48,7 @@ Value provided:
     ● US2. As an external user, I want to visit a responsive website, so that I can complete my job at anytime anywhere easily without rely on computers.
     ● US3. As an external user, I want to visit a good user interactive website, so that i feel it is a trustworthy website to working with.
     ● US4. As an external user, I want to get the information easily within a particular domain, so that it save my memory & time. 
-    ● US5. As an external user, I want to have more choices on sailing schedule, so that I can meet the production & client' requirements easily.
+    ● US5. As an external user, I want to have more choices on sailing schedule & vendor (shipper companies), so that I can meet the production & client' requirements easily.
     ● US6. As an external user, I want to know more about the company who posted the schedule, so that I can make decision whether to contact the vendor.
     ● US7. As an external user (Shipping company), I want to create, display, edit and delete my in-house sailing schedule within the particular domain, so that I can benefit from this website as well. 
     ● US8. As an external user (Shipping company), I want to advertise my company profile on the platform, so that it help to develop a distinctive brand for my business and stand out from our competitors
@@ -57,28 +57,77 @@ Value provided:
 ```
 
 ### 2b) Functional Requirement (FR)					
-| User Stories |	--> FR |	Functional Requirement (FR)  |			
+| User Stories | FR |	Functional Requirement (FR)  |			
 |     :---:    |     :---: |:---       |					
-| US1 |	--> FR1 |	Good Navigation that all resources are easy to find, allowing shippers to navigate the layout of the site intuitively.   |									
-| US4 |	--> FR2 |	Connect external users to different template to ensure requirements are fulfilled  |									
-| US5 |	--> FR3 |	Searchable sailing schedule   |									
-| US6 |	--> FR4 |	Allow external users to the view Shipping companies' website site & profile  |									
-| US7 |	--> FR5 |	Allow external users (Shipping companies) to add, update and delete their own sailing schedule   |									
-| US8 |	--> FR6 |	Allow external users (Shipping companies) to add, update and delete image or article for advertisement   |									
-| US9 |	--> FR7 |	A library for Site Onwer to collect data information through this platform "Backend"  |									
-| US10 |	--> FR8 |	Allow external users (Shipping companies) to sign up for the advestisement session (Optional)  |									
-		
+| US1 |	FR1 |	FixedTop Navigation that all resources are easy to find, allowing shippers to navigate the layout of the site intuitively.   |	
+| US2 |	FR2 |	Responsive design  |	
+| US5 |	FR3 |	Searchable sailing schedule   |	
+| US6 |	FR4 |	Allow external users to the view Shipping companies' website site & profile  |	
+| US7 |	FR5 |	Allow external users (Shipping companies) to add, update and delete their own sailing schedule   |	
+| US8 |	FR6 |	Allow external users (Shipping companies) to add, update and delete image or article for advertisement   |	
+| US9 |	FR7 |	A library for Site Onwer to collect data information through this platform "Backend"  |	
+| US10 |	FR8 |	Allow external users (Shipping companies) to sign up for the advestisement session (Optional)  |	
+						
 						
 ### 2c) Content Requirement (CR)			
-| User Stories |	--> CR |	Content Requirement (CR)  |			
+| User Stories | CR |	Content Requirement (CR)  |			
 |     :---:    |     :---: |:---       |			
-| US2 |	--> CR1 |	Responsive design  |	
-| US3 |	--> CR2 |	User interactions design  |	
-| US4 |	--> CR3 |	A short & quick introduction to attract more external users posting sailing & advertise their profile at this Platform  |	
-| US5 |	--> CR4 |	Sailing schedule section  |	
-| US7 |	--> CR5 |	CRUD sailing schedule section  |	
-| US8 |	--> CR6 |	CRUD image and article section for profile advertisement  |	
-| US10 |	--> CR7 |	(Optional) Sign up section for advertisement  |	
+| US3 |	CR1 |	User interactions design  |	
+| US4 |	CR2 |	A short & quick introduction to attract more external users posting sailing & advertise their profile at this Platform  |	
+| US5 |	CR3 |	Sailing schedule section  |	
+| US5 |	CR4 |	Advertising members' profile section  |	
+| US7 |	CR5 |	CRUD sailing schedule section  |	
+| US8 |	CR6 |	CRUD image and article section for profile advertisement  |	
+| US10 |	CR7 |	(Optional) Sign up section for advertisement  |	
+
+
+## 3) STRUCTURE				
+### 3a) Information Architecture				
+#### Image required				
+Image required on the website to fulfill the content requirements.				
+| US |	CR |	CI |	Content Inventory (CI)  |	
+|     :---:    |     :---: |     :---:    |:---       |	
+| US3 |	CR1 |	CI1 |	Hero background image   |	
+				
+#### Content Inventory (CI)				
+Information required on the website to fulfill the content requirements.				
+				
+| US |	CR |	CI |	Content Inventory (CI)  |	
+|     :---:    |     :---: |     :---:    |:---       |	
+| US4 |	CR2 |	CI2 |	A nice & short sentences to promote this platform  |	
+| US5 |	CR3 |	CI3 |	"R" View Sailing schedule session  |	
+| US5 |	CR4 |	CI4 |	"R" View Profile advertisement session  |	
+| US7 |	CR5 |	CI5 |	"C" + "U" sailing schedule section  |	
+| " |	" |	CI6 |	"D" sailing schedule section  |	
+| US8 |	CR6 |	CI7 |	"C" + "U" image and article section for profile advertisement session  |	
+| " |	" |	CI8 |	"D" image and article section for profile advertisement session  |	
+
+#### Content Structure (CS)
+In these modern days, users are constantly bombarded with too much content, people love simplicity. With this, we design it as a "One-page websites" offer a fast and clear reading experience. Below is the IA Sitemap for landing page. 
+
+<img src="static/image/IASitemap_LandingPage.png" align="left" width="130px" height="450px"/>
+
+##### Landing Page :
+```
+CI1.	It starts with a landing page with a 100% width image allow visitor perceive briefly of what is the related industry 		
+CI2.	A nice & short sentences allow visitor to more understand the platform a little better.		
+```			
+##### Profile advertisement session :  			
+```			
+CI4.	"R" View Profile advertisement session		
+CI7.	"C" + "U" image and article  button		
+CI8.	"D" image and article button		
+```			
+##### Sailing session :  			
+```			
+CI3.	"R" View Sailing schedule session		
+CI5.	"C" + "U" sailing schedule button		
+CI6.	"D" sailing schedule button		
+```
+The contents will be regroup into a sequential structure as below IA Sitemap.
+<img src="static/image/IASitemap_Overall.png" width="" height=""/>
+
+				
 
 
 
