@@ -53,7 +53,7 @@ Value provided:
     ● US7. As an external user (Shipping company), I want to create, display, edit and delete my in-house sailing schedule within the particular domain, so that I can benefit from this website as well. 
     ● US8. As an external user (Shipping company), I want to advertise my company profile on the platform, so that it help to develop a distinctive brand for my business and stand out from our competitors
     ● US9. As an Site Onwer, I want to collect data information through this platform, so that I can develop it to other businesses in future. 
-    ● US10. As an Site Onwer, I want to have an advertisement sign up session, so that I can gain some returns on this platform. (Optional after its popular)
+    ● US10. As an Site Onwer, I want to have an advertisement sign up section, so that I can gain some returns on this platform. (Optional after its popular)
 ```
 
 ### 2b) Functional Requirement (FR)					
@@ -66,7 +66,7 @@ Value provided:
 | US7 |	FR5 |	Allow external users (Shipping companies) to add, update and delete their own sailing schedule   |	
 | US8 |	FR6 |	Allow external users (Shipping companies) to add, update and delete image or article for advertisement   |	
 | US9 |	FR7 |	A library for Site Onwer to collect data information through this platform "Backend"  |	
-| US10 |	FR8 |	Allow external users (Shipping companies) to sign up for the advestisement session (Optional)  |	
+| US10 |	FR8 |	Allow external users (Shipping companies) to sign up for the advestisement section (Optional)  |	
 						
 						
 ### 2c) Content Requirement (CR)			
@@ -95,12 +95,12 @@ Information required on the website to fulfill the content requirements.
 | US |	CR |	CI |	Content Inventory (CI)  |	
 |     :---:    |     :---: |     :---:    |:---       |	
 | US4 |	CR2 |	CI2 |	A nice & short sentences to promote this platform  |	
-| US5 |	CR3 |	CI3 |	"R" View Sailing schedule session  |	
-| US5 |	CR4 |	CI4 |	"R" View Profile advertisement session  |	
+| US5 |	CR3 |	CI3 |	"R" View Sailing schedule section |	
+| US5 |	CR4 |	CI4 |	"R" View Profile advertisement section  |	
 | US7 |	CR5 |	CI5 |	"C" + "U" sailing schedule section  |	
 | " |	" |	CI6 |	"D" sailing schedule section  |	
-| US8 |	CR6 |	CI7 |	"C" + "U" image and article section for profile advertisement session  |	
-| " |	" |	CI8 |	"D" image and article section for profile advertisement session  |	
+| US8 |	CR6 |	CI7 |	"C" + "U" image and article section for profile advertisement section  |	
+| " |	" |	CI8 |	"D" image and article section for profile advertisement section  |	
 
 #### Content Structure (CS)
 In these modern days, users are constantly bombarded with too much content, people love simplicity. With this, we design it as a "One-page websites" offer a fast and clear reading experience. The contents will be regroup into a sequential structure as below IA Sitemap for landing Page & overall. 
@@ -112,15 +112,15 @@ In these modern days, users are constantly bombarded with too much content, peop
 CI1.	It starts with a landing page with a 100% width image allow visitor perceive briefly of what is the related industry 		
 CI2.	A nice & short sentences allow visitor to more understand the platform a little better.		
 ```			
-##### Profile advertisement session :  			
+##### Profile advertisement section :  			
 ```			
-CI4.	"R" View Profile advertisement session		
+CI4.	"R" View Profile advertisement section	
 CI7.	"C" + "U" image and article  button		
 CI8.	"D" image and article button		
 ```			
-##### Sailing session :  			
+##### Sailing section :  			
 ```			
-CI3.	"R" View Sailing schedule session		
+CI3.	"R" View Sailing schedule section	
 CI5.	"C" + "U" sailing schedule button		
 CI6.	"D" sailing schedule button		
 ```
