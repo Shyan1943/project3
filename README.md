@@ -210,6 +210,20 @@ A brand is the set of expectations, memories, stories and relationships that, ta
       (5. Surface Font) Professional typography 
       (5. Surface Image) A modern & energetic aesthetic image 
 
+## 5) SURFACE
+<img src="/static/image/surfacecolorpalette.jpg" align="left" width="40%" height="40%"/> 
+
+### Colour
+The color palette keep at simple, with only 1–3 primary colors. In this website, the site logo is dark purple, so I will choose Green and light purple to neutral it. 
+
+### Typography
+Font-Family <a href="https://fonts.google.com/specimen/Open+Sans?category=Sans+Serif&selection.family=Open+Sans:wght@600&sidebar.open=true" target="_blank">“Sans serif”</a> are chosen as the most famous fonts are recognizable even when taken out of context. A single primary typeface to lead the brand identity design, and it also work well with the branding and color palette. And giving the image of being modern, approachable, and clean. 
+CSS rules to specify families font-family: 'Open Sans', sans-serif;
+Open Sans Semi-bold 600 `<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">`
+
+### Imagery
+Full-width cover “containers port” image selected aims to build an emotional connection with External User, tell them what this platform is doing, related to which industry as well as Illustrations strengthen the branding.
+
 
 
 ## Deployment 
