@@ -21,7 +21,7 @@ label {
 }
 
 .btn, input.search_btn {
-    color: #508993;
+    color: #121214;
     background-color: #f2d2ec;
     border-color: #f2d2ec;
 }
@@ -101,6 +101,10 @@ div.container {
     font-size: x-small;
 }
 
+.card-title, a {
+    color: #544f63;
+}
+
 .card-title {
     margin-bottom: .1rem;
 }
@@ -165,11 +169,11 @@ div.container {
 }
 .delete.btn {
     color:  #f2d2ec;
-    background:  #508593;
+    background:  #121214;
 }
 
 .delete.btn-danger {
-    color:  #508593;
+    color:  #121214;
     background:  #f2d2ec;
 }
 

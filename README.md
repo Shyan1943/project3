@@ -225,7 +225,7 @@ A brand is the set of expectations, memories, stories and relationships that, ta
       (5. Surface Image) A modern & energetic aesthetic image 
 
 ## 5) SURFACE
-<img src="/static/image/surfacecolorpalette.jpg" align="left" width="50%" height="50%"/> 
+<img src="/static/image/surfacecolorpalette.jpg" align="left" width="55%" height="55%"/> 
 
 ### Colour
 The color palette keep at simple, with only 1–3 primary colors. In this website, the site logo is dark purple, so I will choose Green and light purple to neutral it. 
@@ -330,8 +330,6 @@ gunicorn==20.0.4
 	
 ### Documentary	
 32) <a href="https://github.com/Code-Institute-Solutions/readme-template/blob/master/README.md" target="_blank">Code Institute Readme.md template</a> for Readme file report guideline 	
-
-
 
 # DEPLOYMENT
 
