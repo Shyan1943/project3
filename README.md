@@ -130,8 +130,15 @@ CI6.	"D" sailing schedule button
 
 #### Database Structure
 ##### Entity Relationship Diagram (ERD)
-This ERD  is relevant on this particular domain, consisting of three collections (User, sailing schedule & profile ads). However,I will only implement 2 collections (sailing schedule & profile ads) on this project at this moment due to user auth.
+This ERD  is relevant on this particular domain, consisting of three collections (User, sailing schedule & profile ads).
+
 <img src="static/image/data_ERD.jpg">
+
+#### Data model
+##### Logical Diagram
+However,I will only implement 2 collections (sailing schedule & profile ads) on this project at this moment due to i've not implemented user auth as at now to ﬁts the purpose of the project
+
+<img src="static/image/data_logicaldiagram.jpg">
 
 
 ### 3b) Interaction Design      	
