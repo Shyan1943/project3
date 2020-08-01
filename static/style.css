@@ -81,6 +81,10 @@ div.container {
     background-color: #508593;
 }
 
+.card-deck {
+    display: block;
+}
+
 .card {
     width: 15rem;
     height: 18rem;

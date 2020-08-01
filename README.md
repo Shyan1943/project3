@@ -363,6 +363,12 @@ gunicorn==20.0.4
     Error found : date does not show up on the schedule_update.template.html
     Corrective action : added `.strftime('%Y-%m-%d')` to the function at the schedule_update.template.html
     Result : fixed bug!!
+
+8. US3 User interactions on browers
+    Error found : Bootstrap card does not display properly on Internet Explorer
+    Corrective action : style .card-deck to display: block; learn from https://github.com/twbs/bootstrap/issues/21885
+    Result : fixed bug!!
+
 ```
 
 # DEPLOYMENT
@@ -616,6 +622,7 @@ To delete a document use `<database>.<collection>.remove()`
 6. Refer to <a href="https://getbootstrap.com/docs/4.0/utilities/spacing/" target="_blank">`mx-auto`</a> and <a href=https://getbootstrap.com/docs/4.3/components/card/ target="_blank">Bootscrap Card</a> to fix Ads Profile Card responsive
 7. Refer to <a href="https://bootstrap-table.com/docs/getting-started/introduction/" target="_blank">bootstrap-Table</a> for An extended table to the integration with some of the most widely used CSS frameworks. 
 8. Refer to <a href="https://guides.github.com/features/mastering-markdown/" target="_blank">Github Markdown</a> to lightweight and easy-to-use syntax for styling all forms of writing on the GitHub platform.
+9. Refer to <a href="https://github.com/twbs/bootstrap/issues/21885" target="_blank">style .card-deck to display: block</a> to fix the Bootstrap card display properly on Internet Explorer
 
 # ACKNOWLEDGEMENTS 
 I received inspiration for this project from : 
