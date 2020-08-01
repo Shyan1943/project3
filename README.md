@@ -226,7 +226,7 @@ A brand is the set of expectations, memories, stories and relationships that, ta
       (5. Surface Image) A modern & energetic aesthetic image 
 
 ## 5) SURFACE
-<img src="/static/image/surfacecolorpalette.jpg" align="left" width="55%" height="55%"/> 
+<img src="/static/image/surfacecolorpalette.jpg" align="left" width="60%" height="60%"/> 
 
 ### Colour
 The color palette keep at simple, with only 1–3 primary colors. In this website, the site logo is dark purple, so I will choose Green and light purple to neutral it. 
@@ -356,6 +356,23 @@ gunicorn==20.0.4
 ```
 
 # DEPLOYMENT
+## a) PREPARATION	
+### 1. Design	
+* 	Design a good UI UX
+* 	Design a database structure, Entity Relationship Diagram that is relevant for that particular domain, consisting of two collection by using <a href="https://erdplus.com/" target="_blank">ERDPlus </a>
+*	Design an assess functionality, usability and data management within the Full Stack web application by keep reference back to the user stories, functional & content requirement.
+*	Design a data model, a logical diagram that ﬁts the purpose of the project by using <a href="https://sqldbm.com/Home/" target="_blank">SQLDbm</a> 
+	
+### 2. Content	
+* 	Choose font to be used 
+* 	Fix color palette to be used 
+* 	Find good images to be used 
+* 	ensured file & name ﬁles consistently and descriptively, without spaces or capitalization to allow for cross-platform compatibility.
+
+### 3. Before coding 	
+*	Fixed features 
+* 	Understand the PEP8 style guide to ensure the use Python code that is consistent in style and conforms to the PEP8 style guide and validated HTML and CSS code.
+*	Fixed Technologies to be used 
 
 ## b) PRODUCTION
 
