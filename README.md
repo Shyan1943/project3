@@ -127,6 +127,13 @@ CI6.	"D" sailing schedule button
 #### IA Sitemap (Overall)
 <img src="static/image/IASitemap_Overall.png"/>
 
+
+#### Database Structure
+##### Entity Relationship Diagram (ERD)
+This ERD  is relevant on this particular domain, consisting of three collections (User, sailing schedule & profile ads). However,I will only implement 2 collections (sailing schedule & profile ads) on this project at this moment due to user auth.
+<img src="static/image/data_ERD.jpg">
+
+
 ### 3b) Interaction Design      	
 #### Learnability	
       i.	Different navigation are positions at the familiar location a web surfer, and throughout the website to enhance familiarity and consistency. (FR1)
@@ -211,7 +218,7 @@ A brand is the set of expectations, memories, stories and relationships that, ta
       (5. Surface Image) A modern & energetic aesthetic image 
 
 ## 5) SURFACE
-<img src="/static/image/surfacecolorpalette.jpg" align="left" width="40%" height="40%"/> 
+<img src="/static/image/surfacecolorpalette.jpg" align="left" width="50%" height="50%"/> 
 
 ### Colour
 The color palette keep at simple, with only 1–3 primary colors. In this website, the site logo is dark purple, so I will choose Green and light purple to neutral it. 
