@@ -31,16 +31,16 @@
                             <a class="nav-link" href="{{url_for('home')}}">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Schedule</a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownSchedule" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Schedule</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownSchedule">
                                 <a class="dropdown-item" href="{{url_for('schedule_create_form')}}">Create</a>
                                 <a class="dropdown-item" href="/#result">Search</a>
                                 <a class="dropdown-item" href="/#result">View all schedules</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profile Ads</a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownProfile" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profile Ads</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownProfile">
                                 <a class="dropdown-item" href="{{url_for('profile_upload')}}">Create</a>
                                 <a class="dropdown-item" href="/#profile">View all Profile Ads</a>
                             </div>
@@ -51,19 +51,19 @@
         </div>
     </header>
 
-    <mark>
-        <div class="container">
-            {% with messages = get_flashed_messages() %}
-            {% if messages %}
-                {% for m in messages %}
-                <div class="alert alert-success">
-                    {{m}}
-                </div>
-                {% endfor %}
-            {% endif %}
-            {% endwith %}
-        </div>
+    
+    <mark class="container">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for m in messages %}
+            <div class="alert alert-success">
+                {{m}}
+            </div>
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
     </mark>
+  
 
 {%block content%}{%endblock%}
 

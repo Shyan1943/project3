@@ -15,10 +15,10 @@
 
 <figure>
     <div class="jumbotron">
-        <div class="row">
+        <div class="row" id="profile">
             {% for i in images %}
             <div class="card-deck col-lg-2.5 mx-auto">
-                <div class="card" id="profile">
+                <div class="card">
                     <img class="card-img-top" src="{{i.uploaded_image_url}}" alt="Member Company name"/>
                     <div class="card-body">
                         <a href="{{i.website}}" target="_blank"><h5 class="card-title">{{i.company_name}}</h5></a>
@@ -38,7 +38,7 @@
 </figure>
 
 
-<section>
+<div>
     <div id="result" class="jumbotron table-responsive-lg">
         <form class="form-inline d-lg-flex mb-3 justify-content-center" method="GET">
             <input type="text" class="form-control" name="search_pol" placeholder="Port Of Loading"/>
@@ -81,5 +81,5 @@
         </table>
         <div class="text-center"><a href="{{url_for('schedule_create_form')}}" class="btn">Create Schedule</a></div>
     </div>
-</section>
+</div>
 {% endblock %}
