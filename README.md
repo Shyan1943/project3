@@ -152,7 +152,8 @@ However,I will only implement 2 collections (sailing schedule & profile ads) on 
       iii.	<target="_blank"> was used to improve the UX, when user click on any link out (to another web site or social site), that opens a new window. Whereas when they're clicking on a link internal to a site that they remain within the same browser window
 #### Understandability	
       i.	Content are group into logical order with short word or phrase title easily understandable 
-      ii.	Readability
+      ii.	Readability (Flesch Kincaid Reading Ease Test = 73.3, Flesch-Kincaid Grade Level Score = 5.2)       
+
 #### Operability	
       i.	The visitors able to easily search the sailing schedule without encountering any issues. (FR3)
       ii.	Allow visitors to the view Shipping companies' website site & profile (FR4)
@@ -332,6 +333,19 @@ gunicorn==20.0.4
 32) <a href="https://github.com/Code-Institute-Solutions/readme-template/blob/master/README.md" target="_blank">Code Institute Readme.md template</a> for Readme file report guideline 	
 
 # TESTING
+## Tested with no error
+| Testing on   | Result |
+|:--|:--|
+| <a href="https://www.seoptimer.com/alt-tag-checker" target="_blank">Image</a> | "You do not have any images missing ALT attributes on your page"|
+| <a href="https://www.webfx.com/tools/read-able/" target="_blank">Readability</a> | "Flesch Kincaid Reading Ease Test = 73.3, Flesch-Kincaid Grade Level Score = 5.2"|
+| Python PEP& Style | No underline error message on gitpod | 
+| Different browers | The website was tested on Google Chrome, Microsoft Edge and Safari browsers. | 
+| US1 Navigation | Clicked on each of the navigation on every page and all pages were linking correctly. |
+| US2 Responsiveness | The site can be viewed and used on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX and resolutions size from (1920x1200) till (320x480)|
+| US5 Search function | Return with the right answer, no error found |
+| US6 Hyperlink | Managed to direct user to members' promote hyperlink in new tab |
+| US7 CRUD data | Users able to add, update and delete their own sailing schedule. There are present and working |
+| US8 CRUD Image | Users able to add, update and delete their advertisement image on profile ads. There are present and working |
 
 ## Tested with errors found
 ```
