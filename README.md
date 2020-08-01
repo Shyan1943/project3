@@ -226,7 +226,7 @@ A brand is the set of expectations, memories, stories and relationships that, ta
       (5. Surface Image) A modern & energetic aesthetic image 
 
 ## 5) SURFACE
-<img src="/static/image/surfacecolorpalette.jpg" align="left" width="70%" height="70%"/> 
+<img src="/static/image/surfacecolorpalette.jpg" align="left" width="150px" height="200px"/> 
 
 ### Colour
 The color palette keep at simple, with only 1–3 primary colors. In this website, the site logo is dark purple, so I will choose Green and light purple to neutral it. 
@@ -592,3 +592,17 @@ To delete a document use `<database>.<collection>.remove()`
     * commit everything `git commit -m "<Commit Message>"`
     * push to heroku using `git push heroku master`
 
+# CREDITS		
+## Content	
+	i. 	Refer to <a href="https://github.com/Code-Institute-Solutions/SampleREADME#" target="_blank">Code Institute Readme.md sample</a> for Readme file report guidelihttps://github.com/Code-Institute-Solutions/SampleREADME#ne 
+	ii.	All images are downloaded from <a href="https://unsplash.com" target="_blank">Unsplash</a> 
+		
+## Code
+	i.	Fixed font is chosed from <a href="https://fonts.google.com/specimen/Open+Sans?category=Sans+Serif&selection.family=Open+Sans:wght@600&sidebar.open=true" target="_blank">Google Font</a> to making the web more beautiful, fast, and open through great typography 
+	ii.	Refer to the notes took down during the lesson to code the CRUD funtionality 
+	iii.	Refer to <a href="https://www.w3.org/TR/css-images-3/#linear-gradients"  target="_blank">linear-gradients</a> to darker the landing page hero image 
+	iv.	Refer to <a href="https://getbootstrap.com/docs/4.1/utilities/flex/"  target="_blank">.d-lg-flex</a> to fix the "search function" layout, alignment and responsive variations
+	v.	Refer to <a href="https://getbootstrap.com/docs/4.4/components/jumbotron/"  target="_blank">Jumbotron</a> to extend the entire viewport at profile advertisement section
+	vi.	Refer to <a href="https://getbootstrap.com/docs/4.0/utilities/spacing/" target="_blank">`mx-auto`</a> and <a href="https://getbootstrap.com/docs/4.3/components/card/" target="_blank">Bootscrap Card</a> to fix Ads Profile Card responsive 
+	vii.	Refer to <a href="https://bootstrap-table.com/docs/getting-started/introduction/" target="_blank">bootstrap-Table</a> for An extended table to the integration with some of the most widely used CSS frameworks. 
+	viii.	Refer to <a href="https://guides.github.com/features/mastering-markdown/" target="_blank">Github Markdown</a> to lightweight and easy-to-use syntax for styling all forms of writing on the GitHub platform.
