@@ -226,7 +226,7 @@ A brand is the set of expectations, memories, stories and relationships that, ta
       (5. Surface Image) A modern & energetic aesthetic image 
 
 ## 5) SURFACE
-<img src="/static/image/surfacecolorpalette.jpg" align="left" width="460px" height="550px"/> 
+<img src="/static/image/surfacecolorpalette.jpg" align="left" width="430px" height="600px"/> 
 
 ### Colour
 The color palette keep at simple, with only 1–3 primary colors. In this website, the site logo is dark purple, so I will choose Green and light purple to neutral it. 
@@ -359,6 +359,11 @@ gunicorn==20.0.4
     Error found : "The aria-labelledby attribute must point to an element in the same document."
     Corrective action : assign id="navbarDropdownSchedule" to aria-labelledby="navbarDropdownSchedule". Learn from https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute
     Result : Document checking completed. No errors or warnings to show.
+
+3. Check CSS by using https://jigsaw.w3.org/css-validator/
+    Error found : "Property `.fa-picture-o` size doesn't exist. The closest matching property name is resize : 4rem"
+    Corrective action : remove `resize : 4rem;` in style.css, but to `class="fa-5x"` at template.html 
+    Result : Fixed bug!! No more error
 
 5. US3 User interactions design
     Error found : table body very messy while hover due to size enlarge
@@ -635,6 +640,7 @@ To delete a document use `<database>.<collection>.remove()`
 8. Refer to <a href="https://guides.github.com/features/mastering-markdown/" target="_blank">Github Markdown</a> to lightweight and easy-to-use syntax for styling all forms of writing on the GitHub platform.
 9. Refer to <a href="https://github.com/twbs/bootstrap/issues/21885" target="_blank">style .card-deck to display: block</a> to fix the Bootstrap card display properly on Internet Explorer
 10. Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute" target="_blank">MDN wed</a> to fix HTML `aria-labelledby` error
+11. Refer to <a href="https://fontawesome.com/v4.7.0/examples/" target="_blank">Font Awesome</a> to fix `.fa-picture-o` resize on CSS error
 
 # ACKNOWLEDGEMENTS 
 I received inspiration for this project from : 
