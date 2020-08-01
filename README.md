@@ -225,7 +225,7 @@ A brand is the set of expectations, memories, stories and relationships that, ta
       (5. Surface Image) A modern & energetic aesthetic image 
 
 ## 5) SURFACE
-<img src="/static/image/surfacecolorpalette.jpg" align="left" width="50%" height="50%"/> 
+<img src="/static/image/surfacecolorpalette.jpg" align="left" width="45%" height="45%"/> 
 
 ### Colour
 The color palette keep at simple, with only 1–3 primary colors. In this website, the site logo is dark purple, so I will choose Green and light purple to neutral it. 
@@ -238,6 +238,41 @@ Open Sans Semi-bold 600 `<link href="https://fonts.googleapis.com/css2?family=Op
 ### Imagery
 Full-width cover “containers port” image selected aims to build an emotional connection with External User, tell them what this platform is doing, related to which industry as well as Illustrations strengthen the branding.
 
+# FEATURES
+### Ease of navigation (FR1)
+      Feature 1. Allow the External User to view all the sections at a glance and from one page to another easily by having the fixed-top position navigation system (FR1)
+      Feature 2. Allow the External User to search schedule straightaway, by having “Search” function at the Center of the Landing page and hyperlink it to “result” page directly. (FR3 & CR1) 
+
+### Responsiveness (FR2)
+      Feature 3. Allow the External User to view the platform with all devices, like desktop, laptop, tablets and smart mobile phones. It can be view in both portrait and landscape orientation as well by implement the responsive design. (FR2) 
+
+### User interactions design (CR1)
+      Feature 4. Hover effect "enlarge & change of button color" on all the clickable button/hyperlinks to provide results in a manner that is visually appealing and user friendly
+      Feature 5. Graphical elements like images, typography and icons are used to replace the words to communicate information to users 
+      Feature 6. Used of <a href="https://flask.palletsprojects.com/en/1.1.x/patterns/flashing/" target="_blank">Message Flashing</a> to give user feedback all the times. E.g :" the form has been created, updated or deleted."
+    
+### Consistency and predictability (CR1)
+      Feature 7. Allow the External User to stay clear and easy find the same components position at the same place regardless of which page they are at by having the header and theme stay consistent throughout the site. 
+
+### Profile Ads section (CR4)
+      Feature 8. Allow the External User to know the current popular and active Shipping Companies in this plarform. 
+      Feature 9. Allow the External User to know more about the Shipping Company, by clicking the "internet icon" on each particular profile ads. (FR4)
+      Feature 10. Create the back-end code and front-end form(s), which allow external users (Shipping companies) to create, locate, display, edit and delete profile ads records. (FR6)
+
+### Schedule section (CR3 & CR5)
+      Feature 11. Allow the External User to view all sailing schedules information at the "view all schedule" section (CR3)
+      Feature 12. To simplify External Users’ supply chain, I create the back-end and front-end functionality for external users to locate schedule based on the sailing schedule fields by using a full search functionality (FR3) 
+      Feature 13. Allow the External User to know more that particular Shipping company by clicking the "member name" on each particular schedule. (FR4)
+      Feature 14. Create the back-end code and front-end form(s), which allow external users (Shipping companies) to create, locate, display, edit and delete schedule records. (FR6)
+      
+### Backend Data Collection (FR7)
+      Feature 15. Used of MongoDB to collect data information through this platform "Backend" (FR7) 
+
+### Security Features
+      Feature 16. The <.gitignore> file was created for the purpose of preventing files, environment variables, any passwords or security sensitive information, from being uploaded without needing to explicitly exclude them. Any file added to the gitignore will never be included in git commits. Not only does this feature allow for system-specific files to be untouched, but it allows for insurance that sensitive files will never be uploaded. 
+
+## Features Left to Implement
+      Feature 17. Allow external users (Shipping companies) to sign up for the advestisement section (Optional) (FR8)
 
 
 ## Deployment 
