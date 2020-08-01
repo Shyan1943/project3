@@ -331,6 +331,16 @@ gunicorn==20.0.4
 ### Documentary	
 32) <a href="https://github.com/Code-Institute-Solutions/readme-template/blob/master/README.md" target="_blank">Code Institute Readme.md template</a> for Readme file report guideline 	
 
+# TESTING
+
+## Tested with errors found
+```
+5. US3 User interactions design
+    Error found : table body very messy while hover due to size enlarge
+    Corrective action : remove table tbody tr:hover from style.css
+    Result : Look much better now!!
+```
+
 # DEPLOYMENT
 
 ## b) PRODUCTION
@@ -529,7 +539,6 @@ To delete a document use `<database>.<collection>.remove()`
 ### To update the Heroku deployed site 
 * At Gitpod terminal : 
     * log into Heroku using  `heroku login`
-    * to remote `git remote -v`
     * `git add .`
     * commit everything `git commit -m "<Commit Message>"`
     * push to heroku using `git push heroku master`

@@ -138,10 +138,6 @@ div.container {
     background-color: #eeeeee !important;
 }
 
-.table tbody tr:hover td, .table tbody tr:hover th {
-    font-size: 150%;
-}
-
 /* Schedule upload page */
 #upload_widget {
     width: 100%;
