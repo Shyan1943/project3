@@ -146,7 +146,7 @@ However,I will only implement 2 collections (sailing schedule & profile ads) on 
       i.	Different navigation are positions at the familiar location a web surfer, and throughout the website to enhance familiarity and consistency. (FR1)
             a.	Logo that leads back to the home page
             b.	navigation system in the form of site map allowing visitor to view all the sections at a glance
-            c.	a clear and unambiguous navigation structures <a href="http://www.flaskboilerplate.com/" target="_blank">fixed at the top</a>
+            c.  a clear and unambiguous navigation structures to <a href="http://www.flaskboilerplate.com/" target="_blank">fixed at the top</a>
             d.	all resources on the site are easy to ﬁnd, allowing users to navigate the layout of the site intuitively
       ii.	Button with hover effect will be used to indicate there's a link to the working project to increase the predictability.
       iii.	<target="_blank"> was used to improve the UX, when user click on any link out (to another web site or social site), that opens a new window. Whereas when they're clicking on a link internal to a site that they remain within the same browser window
@@ -226,7 +226,7 @@ A brand is the set of expectations, memories, stories and relationships that, ta
       (5. Surface Image) A modern & energetic aesthetic image 
 
 ## 5) SURFACE
-<img src="/static/image/surfacecolorpalette.jpg" align="left" width="300px" height="400px"/> 
+<img src="/static/image/surfacecolorpalette.jpg" align="left" width="390px" height="520px"/> 
 
 ### Colour
 The color palette keep at simple, with only 1–3 primary colors. In this website, the site logo is dark purple, so I will choose Green and light purple to neutral it. 
@@ -320,7 +320,7 @@ gunicorn==20.0.4
 23) <a href="https://getbootstrap.com/docs/4.1/utilities/flex/" target="_blank">d-lg-flex </a>to fix the search function layout, alignment and responsive variations
 24) Hover.css was used on all clickable icons while being hovered over.	
 25) <a href="https://getbootstrap.com/docs/4.4/components/jumbotron/" target="_blank">Jumbotron </a>to extend the entire viewport at profile advertisement section
-26) <a href="https://getbootstrap.com/docs/4.0/utilities/spacing/" target="_blank">`mx-auto`</a> and <a href="https://getbootstrap.com/docs/4.3/components/card/" target="_blank">Bootscrap Card</a> to fix Ads Profile Card responsive 	
+26) <a href="https://getbootstrap.com/docs/4.0/utilities/spacing/" target="_blank">`mx-auto`</a> and <a href=https://getbootstrap.com/docs/4.3/components/card/ target="_blank">Bootscrap Card</a> to fix Ads Profile Card responsive	
 27) <a href="https://bootstrap-table.com/docs/getting-started/introduction/" target="_blank">bootstrap-Table</a> for An extended table to the integration with some of the most widely used CSS frameworks. 	
 28) `target="_blank"`to improve the UX, when user click on any link out (to another web site or social site), that opens a new window. 	
 29) <a href="https://fontawesome.com/v4.7.0/icons/" target="_blank">Font Awesome Icons </a>are used on all pages throughout the website to add icons for aesthetic and UX purposes to represent accessibility standards
@@ -594,7 +594,7 @@ To delete a document use `<database>.<collection>.remove()`
 
 # CREDITS
 ## Content
-1. Refer to <a href="https://github.com/Code-Institute-Solutions/SampleREADME#" target="_blank">Code Institute Readme.md sample</a> for Readme file report guidelihttps://github.com/Code-Institute-Solutions/SampleREADME#ne 
+1. Refer to <a href="https://github.com/Code-Institute-Solutions/SampleREADME#" target="_blank">Code Institute Readme.md sample</a> for Readme file report guidelines
 2. All images are downloaded from <a href="https://unsplash.com" target="_blank">Unsplash</a> 
 
 ## Code
@@ -606,3 +606,13 @@ To delete a document use `<database>.<collection>.remove()`
 6. Refer to <a href="https://getbootstrap.com/docs/4.0/utilities/spacing/" target="_blank">`mx-auto`</a> and <a href=https://getbootstrap.com/docs/4.3/components/card/ target="_blank">Bootscrap Card</a> to fix Ads Profile Card responsive
 7. Refer to <a href="https://bootstrap-table.com/docs/getting-started/introduction/" target="_blank">bootstrap-Table</a> for An extended table to the integration with some of the most widely used CSS frameworks. 
 8. Refer to <a href="https://guides.github.com/features/mastering-markdown/" target="_blank">Github Markdown</a> to lightweight and easy-to-use syntax for styling all forms of writing on the GitHub platform.
+
+# ACKNOWLEDGEMENTS 
+I received inspiration for this project from : 
+
+      1) Facebook https://www.facebook.com/ - on project idea
+      2) Channel New Asia Mobile apps - on project idea
+      3) Mr Paul Chor - Mentor of my course
+      4) Mr Muhd Arif Rawi - Consultant of my project 
+      5) Mr Donovan Lo - My classmate – on the Readme report  
+      6) Ms Jolene Wai  - My classmate – on project code fixing
