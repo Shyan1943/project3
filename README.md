@@ -226,7 +226,7 @@ A brand is the set of expectations, memories, stories and relationships that, ta
       (5. Surface Image) A modern & energetic aesthetic image 
 
 ## 5) SURFACE
-<img src="/static/image/surfacecolorpalette.jpg" align="left" width="65%" height="65%"/> 
+<img src="/static/image/surfacecolorpalette.jpg" align="left" width="70%" height="70%"/> 
 
 ### Colour
 The color palette keep at simple, with only 1–3 primary colors. In this website, the site logo is dark purple, so I will choose Green and light purple to neutral it. 
@@ -382,10 +382,10 @@ gunicorn==20.0.4
     iii. Create a new GitHub Repository
 
 ### 2. Launch a workspace container at Gitpod
-1. Click to install <a href="https://www.gitpod.io/docs/browser-extension/" target="_blank">Gitpod Browser Extension </a>on browser in you are using Chrome or Firefox for convenient
-2. Use `Ctrl+F5` on your Github Repository Page to refresh the browser
-3. You will see a Gitpod button (Green color) is added to GitHub that does the prefixing for your convenience. And click on that button 
-4. A workspace is creating as easy as prefixing any GitHub URL with gitpod.io/#.
+    i. Click to install <a href="https://www.gitpod.io/docs/browser-extension/" target="_blank">Gitpod Browser Extension </a>on browser in you are using Chrome or Firefox for convenient
+    ii. Use `Ctrl+F5` on your Github Repository Page to refresh the browser
+    iii. You will see a Gitpod button (Green color) is added to GitHub that does the prefixing for your convenience. And click on that button 
+    iv. A workspace is creating as easy as prefixing any GitHub URL with gitpod.io/#.
 
 ### Take note to commit often for each individual feature/ﬁx, ensuring that commits are small, well-deﬁned and have clear descriptive messages
 
@@ -561,6 +561,7 @@ To delete a document use `<database>.<collection>.remove()`
 * Used of `target="_blank"`to improve the UX, when user click on any link out (to another web site or social site), that opens a new window. 
 
 ## C) PUBLICATION
+* Implement manual test procedures to assess functionality, usability, responsiveness and data management within the Full Stack web application before publication
 * Sign up for a <a href="https://www.heroku.com">Heroku</a> account
 * At Gitpod terminal : 
     * log into Heroku using  `heroku login`
@@ -581,6 +582,8 @@ To delete a document use `<database>.<collection>.remove()`
     * save all your environment variables (in .env file) into Reveal Config Vars 
     * at the top left, cilck on "Open App" 
 * Done publication!!
+* Test to ensure it matches the development version 
+* Ensure that ﬁnal deployed site has no broken internal links
 
 ### To update the Heroku deployed site 
 * At Gitpod terminal : 
