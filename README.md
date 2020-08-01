@@ -226,7 +226,7 @@ A brand is the set of expectations, memories, stories and relationships that, ta
       (5. Surface Image) A modern & energetic aesthetic image 
 
 ## 5) SURFACE
-<img src="/static/image/surfacecolorpalette.jpg" align="left" width="60%" height="60%"/> 
+<img src="/static/image/surfacecolorpalette.jpg" align="left" width="65%" height="65%"/> 
 
 ### Colour
 The color palette keep at simple, with only 1–3 primary colors. In this website, the site logo is dark purple, so I will choose Green and light purple to neutral it. 
@@ -376,9 +376,20 @@ gunicorn==20.0.4
 
 ## b) PRODUCTION
 
-### Launch a workspace container at Gitpod
+### 1. Setting up Github Pages
+    i. Sign up <a href="https://github.com/" target="_blank">Github</a>
+    ii. Log in to GitHub
+    iii. Create a new GitHub Repository
 
-### 1. Create file --> requirements.txt  
+### 2. Launch a workspace container at Gitpod
+1. Click to install <a href="https://www.gitpod.io/docs/browser-extension/" target="_blank">Gitpod Browser Extension </a>on browser in you are using Chrome or Firefox for convenient
+2. Use `Ctrl+F5` on your Github Repository Page to refresh the browser
+3. You will see a Gitpod button (Green color) is added to GitHub that does the prefixing for your convenience. And click on that button 
+4. A workspace is creating as easy as prefixing any GitHub URL with gitpod.io/#.
+
+### Take note to commit often for each individual feature/ﬁx, ensuring that commits are small, well-deﬁned and have clear descriptive messages
+
+### 3. Create file --> requirements.txt  
 
 ```
 click==7.1.2
@@ -397,48 +408,51 @@ The requirements we are installing are:
 `pip3 install dnspython` -- is to allow us to connect to Mongo with just the URL
 `pip3 install python-dotenv` -- allows the use of `.env` files for environment variables
 ```
-### 2. How to use requirements.txt
+### 4. How to use requirements.txt
 ```
 pip3 install -r requirements.txt
 ```
-### 3. Create `.env` file to store the passwords and security-sensitive information.
-### 4. Create `.gitignore` file to git ignore the environment variables file, which are never committed to the repository.
+### 5. Create `.env` file to store the passwords and security-sensitive information.
+### 6. Create `.gitignore` file to git ignore the environment variables file, which are never committed to the repository.
 ```
 .env
 ```
-### 5. Create file `app.py` and insert flask template
+### 7. take note to keep debug on any error messages prompt in Gitpod to ensure the use Python code that is consistent in style and conforms to the PEP8 style guide and validated HTML and CSS code.
 
-### 6. Connect mongodb 
+### 8. Create file `app.py` and insert flask template (Ensure that DEBUG mode is turned off in production versions)
+
+### 9. Connect mongodb 
 ```
 MONGO_URI = os.environ.get("MONGO_URI")
 client = pymongo.MongoClient(MONGO_URI)
 DB_NAME = "pro3"
 ```
+### 10. take note to keep testing all functionality and usability while coding by opening browser
 
-### 7. Open Browser
+### 11. Open Browser
 To run a backend Python file, type `python3 app.py`, if Python file is named `app.py` of course.
 A blue button should appear to click: *Make Public*,
 Another blue button should appear to click: *Open Browser*.
 
-### 8. "C"RUD = Create function & template
+### 12. "C"RUD = Create function & template
 To insert a document into the collection use `<database>.<collection>.insert_one()`
 
-### 9. C"R"UD = Reading function & template
+### 13. C"R"UD = Reading function & template
 Using <a href="https://getbootstrap.com/docs/4.4/content/tables/">Bootstrap Table</a> to show the schedule list, added Create button at the home page to bring external user to the create form page. Also, use of Flask `redirect` to bring external user back to the home page. 
 
-### 10. CR"U"D = Update function & template
+### 14. CR"U"D = Update function & template
 * Import `from bson.objectid import ObjectId` at `app.py`
 * Getting a single document use `<database>.<collection>.find_one()`
 * Use `"$set":` for pymongo 
 
 
-### 11. CRU"D" = Delete function & template
+### 15. CRU"D" = Delete function & template
 To delete a document use `<database>.<collection>.remove()`
 
-### 12. import datetime, Python strptime()
+### 16. import datetime, Python strptime()
 ```datetime.datetime.strptime(date, "%Y-%m-%d")```
 
-### 13. Flash Messages 
+### 17. Flash Messages 
 * Import Flash `from flask import flash` at `app.py` file
 * Generate Session Key from https://randomkeygen.com/
 * Save the Session Key in the `.env` file 
@@ -458,14 +472,14 @@ To delete a document use `<database>.<collection>.remove()`
     {%endwith%}
     ```
 
-### 14. Search function
+### 18. Search function
 * NOTE : method is GET
 * HTML : Use <a href="https://getbootstrap.com/docs/4.0/components/forms/#inline-forms">Bootstrap 4 Inline Forms</a>
 * app.py : added coding 
 * Use of `"$regex"` Regular Expression forms a search pattern.
 * Use of `"$options": "i"` to carry out search without considering upper or lower case.
 
-### 15. "C"RUD = Upload profile image for advertisement ('ads')
+### 19. "C"RUD = Upload profile image for advertisement ('ads')
 * Sign up <a href="https://cloudinary.com/users/login">Cloudinary</a>
 * Save the could name & the upload preset in `.env` file. 
 * Retrieve the cloud name and the upload preset from the .env file in the Flask app
@@ -517,20 +531,21 @@ To delete a document use `<database>.<collection>.remove()`
     ```
 * Process the form and save its data to Mongo
 
-### 16. C"R"UD = Reading function for Uploaded profile ads image & description 
+### 20. C"R"UD = Reading function for Uploaded profile ads image & description 
 * <a href="https://getbootstrap.com/docs/4.1/components/card/"></a>Bootstrap 4 Cards</a>
 * Using the grid, wrap cards in columns and rows.
 
-### 17. CR"U"D = Update function for profile ads 
+### 21. CR"U"D = Update function for profile ads 
 * Import `from bson.objectid import ObjectId` at `app.py`
 * Getting a single document use `<database>.<collection>.find_one()`
 * Use `"$set":` for pymongo 
 * insert in JavaScript `document.querySelector("#updated_image").src = result.info.url;`
 
-### 18. CRU"D" = Delete function for profile ads 
+### 22. CRU"D" = Delete function for profile ads 
 To delete a document use `<database>.<collection>.remove()`
 
-### 19. Static CCS 
+### 23. Static CCS 
+* Take note to check the site is responsiveness on every new styling input
 * To create & link the style.css file
     * At the folder, create a new folder `static`
     * At the `static` folder, create a new file `style.css`
