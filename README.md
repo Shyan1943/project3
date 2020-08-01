@@ -225,7 +225,7 @@ A brand is the set of expectations, memories, stories and relationships that, ta
       (5. Surface Image) A modern & energetic aesthetic image 
 
 ## 5) SURFACE
-<img src="/static/image/surfacecolorpalette.jpg" align="left" width="45%" height="45%"/> 
+<img src="/static/image/surfacecolorpalette.jpg" align="left" width="50%" height="50%"/> 
 
 ### Colour
 The color palette keep at simple, with only 1–3 primary colors. In this website, the site logo is dark purple, so I will choose Green and light purple to neutral it. 
@@ -273,15 +273,73 @@ Full-width cover “containers port” image selected aims to build an emotional
 
 ## Features Left to Implement
       Feature 17. Allow external users (Shipping companies) to sign up for the advestisement section (Optional) (FR8)
+      Feature 18. Can have the Carousel effect on the profile card ads to keep the advertising at one row and more attractive
+
+# TECHNOLOGIES USED  
+## requirements.txt
+```
+click==7.1.2
+dnspython==1.16.0
+Flask==1.1.2
+itsdangerous==1.1.0
+pymongo==3.10.1
+python-dotenv==0.13.0
+Werkzeug==1.0.1
+cloudinary==1.20.0
+gunicorn==20.0.4
+```
+## Technologies, Frameworks, Libraries & Programs Used 
+### Preparation
+1) <a href="https://fonts.google.com/specimen/Open+Sans?category=Sans+Serif&selection.family=Open+Sans:wght@600&sidebar.open=true" target="_blank">Google Font</a> to making the web more beautiful, fast, and open through great typography 
+2) <a href="https://www.sessions.edu/color-calculator/" target="_blank">Sessions College color calculator</a> to find the perfect color scheme 
+3) <a href="https://unsplash.com" target="_blank">Unsplash</a> to get an high resolution image
+4) <a href="https://pencil.evolus.vn/" target="_blank">Pencil Project </a>was used to create the wireframes during the design process.
+5) <a href="https://erdplus.com/" target="_blank">ERDPlus </a> to design the database structure, Entity Relationship Diagram (ERD)
+6) <a href="https://sqldbm.com/Home/" target="_blank">SQLDbm</a> to design the data model, Logical Diagram
+
+### Production (Coding)
+7) Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+8) <a href="https://github.com/" target="_blank">Github</a> for Versioning Control System and GitHub for repositories to store the projects code after being pushed from Git.
+9) <a href="https://www.gitpod.io/" target="_blank">Gitpod</a> for code editor redefined and optimized for building and debugging modern web 
+10) <a href="https://www.w3schools.com/html/html_intro.asp" target="_blank">HTM5</a> to structure the webpages
+11) `.gitignore` file is used for the purpose of preventing files, environment variables, any passwords or security sensitive information, from being uploaded without needing to explicitly exclude them. Any file added to the gitignore will never be included in git commits. Not only does this feature allow for system-specific files to be untouched, but it allows for insurance that sensitive files will never be uploaded. 
+12) `pip3 install pymongo` to use Mongo DB
+13) `pip3 install dnspython` -- allow us connect to Mongo with just the URL
+14) `pip3 install python-dotenv` -- allows the use of `.env` files for environment variables
+15) <a href="https://flask.palletsprojects.com/en/1.1.x/tutorial/" target="_blank">Python+Flask</a> web framework to build a web application
+16) <a href="https://www.mongodb.com/" target="_blank">MongoDB</a> to store document described in JSON, a formatting language. Document databases are extremely flexible, allowing variations in the structure of documents and allowing storage of documents that are partially complete.
+17) <a href="https://www.w3schools.com/js/" target="_blank">JavaScript</a> to CRUD Cloudinary profile as image 
+18) <a href="https://flask.palletsprojects.com/en/1.1.x/patterns/flashing/" target="_blank">Message Flashing</a> to give user feedback all the times. E.g :" the form has been created, updated or deleted."
+
+### Production (Styling)	
+19) <a href="https://getbootstrap.com/docs/4.4/getting-started/introduction/" target="_blank">Bootstrap 4.4.1</a> was used to assist with the responsiveness and styling of the website.	
+20) <a href="https://www.w3schools.com/css/css_intro.asp" target="_blank">CSS3</a> to style HTML contents	
+21) <a href="https://getbootstrap.com/docs/4.4/components/navbar/" target="_blank">BootStrap </a>to fix top & responsive navigation bar
+22) <a href="https://www.w3.org/TR/css-images-3/#linear-gradients" target="_blank">linear-gradients </a>to make the landing page Hero image darker
+23) <a href="https://getbootstrap.com/docs/4.1/utilities/flex/" target="_blank">d-lg-flex </a>to fix the search function layout, alignment and responsive variations
+24) Hover.css was used on all clickable icons while being hovered over.	
+25) <a href="https://getbootstrap.com/docs/4.4/components/jumbotron/" target="_blank">Jumbotron </a>to extend the entire viewport at profile advertisement section
+26) <a href="https://getbootstrap.com/docs/4.0/utilities/spacing/" target="_blank">`mx-auto`</a> and <a href="https://getbootstrap.com/docs/4.3/components/card/" target="_blank">Bootscrap Card</a> to fix Ads Profile Card responsive 	
+27) <a href="https://bootstrap-table.com/docs/getting-started/introduction/" target="_blank">bootstrap-Table</a> for An extended table to the integration with some of the most widely used CSS frameworks. 	
+28) `target="_blank"`to improve the UX, when user click on any link out (to another web site or social site), that opens a new window. 	
+29) <a href="https://fontawesome.com/v4.7.0/icons/" target="_blank">Font Awesome Icons </a>are used on all pages throughout the website to add icons for aesthetic and UX purposes to represent accessibility standards
+
+### Publication 	
+30) <a href="https://gunicorn.org/" target="_blank">Gunicorn</a> to run Python application concurrently by running multiple Python processes within a single dyno	
+31) <a href="https://heroku.com/" target="_blank">Heroku</a> to deploy, manage, and scale modern apps, to getting our apps to market.	
+	
+### Documentary	
+32) <a href="https://github.com/Code-Institute-Solutions/readme-template/blob/master/README.md" target="_blank">Code Institute Readme.md template</a> for Readme file report guideline 	
 
 
-## Deployment 
 
-### b) PRODUCTION
+# DEPLOYMENT
 
-#### Launch a workspace container at Gitpod
+## b) PRODUCTION
 
-#### 1. Create file --> requirements.txt  
+### Launch a workspace container at Gitpod
+
+### 1. Create file --> requirements.txt  
 
 ```
 click==7.1.2
@@ -300,48 +358,48 @@ The requirements we are installing are:
 `pip3 install dnspython` -- is to allow us to connect to Mongo with just the URL
 `pip3 install python-dotenv` -- allows the use of `.env` files for environment variables
 ```
-#### 2. How to use requirements.txt
+### 2. How to use requirements.txt
 ```
 pip3 install -r requirements.txt
 ```
-#### 3. Create `.env` file to store the passwords and security-sensitive information.
-#### 4. Create `.gitignore` file to git ignore the environment variables file, which are never committed to the repository.
+### 3. Create `.env` file to store the passwords and security-sensitive information.
+### 4. Create `.gitignore` file to git ignore the environment variables file, which are never committed to the repository.
 ```
 .env
 ```
-#### 5. Create file `app.py` and insert flask template
+### 5. Create file `app.py` and insert flask template
 
-#### 6. Connect mongodb 
+### 6. Connect mongodb 
 ```
 MONGO_URI = os.environ.get("MONGO_URI")
 client = pymongo.MongoClient(MONGO_URI)
 DB_NAME = "pro3"
 ```
 
-#### 7. Open Browser
+### 7. Open Browser
 To run a backend Python file, type `python3 app.py`, if Python file is named `app.py` of course.
 A blue button should appear to click: *Make Public*,
 Another blue button should appear to click: *Open Browser*.
 
-#### 8. "C"RUD = Create function & template
+### 8. "C"RUD = Create function & template
 To insert a document into the collection use `<database>.<collection>.insert_one()`
 
-#### 9. C"R"UD = Reading function & template
+### 9. C"R"UD = Reading function & template
 Using <a href="https://getbootstrap.com/docs/4.4/content/tables/">Bootstrap Table</a> to show the schedule list, added Create button at the home page to bring external user to the create form page. Also, use of Flask `redirect` to bring external user back to the home page. 
 
-#### 10. CR"U"D = Update function & template
+### 10. CR"U"D = Update function & template
 * Import `from bson.objectid import ObjectId` at `app.py`
 * Getting a single document use `<database>.<collection>.find_one()`
 * Use `"$set":` for pymongo 
 
 
-#### 11. CRU"D" = Delete function & template
+### 11. CRU"D" = Delete function & template
 To delete a document use `<database>.<collection>.remove()`
 
-#### 12. import datetime, Python strptime()
+### 12. import datetime, Python strptime()
 ```datetime.datetime.strptime(date, "%Y-%m-%d")```
 
-#### 13. Flash Messages 
+### 13. Flash Messages 
 * Import Flash `from flask import flash` at `app.py` file
 * Generate Session Key from https://randomkeygen.com/
 * Save the Session Key in the `.env` file 
@@ -361,14 +419,14 @@ To delete a document use `<database>.<collection>.remove()`
     {%endwith%}
     ```
 
-#### 14. Search function
+### 14. Search function
 * NOTE : method is GET
 * HTML : Use <a href="https://getbootstrap.com/docs/4.0/components/forms/#inline-forms">Bootstrap 4 Inline Forms</a>
 * app.py : added coding 
 * Use of `"$regex"` Regular Expression forms a search pattern.
 * Use of `"$options": "i"` to carry out search without considering upper or lower case.
 
-#### 15. "C"RUD = Upload profile image for advertisement ('ads')
+### 15. "C"RUD = Upload profile image for advertisement ('ads')
 * Sign up <a href="https://cloudinary.com/users/login">Cloudinary</a>
 * Save the could name & the upload preset in `.env` file. 
 * Retrieve the cloud name and the upload preset from the .env file in the Flask app
@@ -420,20 +478,20 @@ To delete a document use `<database>.<collection>.remove()`
     ```
 * Process the form and save its data to Mongo
 
-#### 16. C"R"UD = Reading function for Uploaded profile ads image & description 
+### 16. C"R"UD = Reading function for Uploaded profile ads image & description 
 * <a href="https://getbootstrap.com/docs/4.1/components/card/"></a>Bootstrap 4 Cards</a>
 * Using the grid, wrap cards in columns and rows.
 
-#### 17. CR"U"D = Update function for profile ads 
+### 17. CR"U"D = Update function for profile ads 
 * Import `from bson.objectid import ObjectId` at `app.py`
 * Getting a single document use `<database>.<collection>.find_one()`
 * Use `"$set":` for pymongo 
 * insert in JavaScript `document.querySelector("#updated_image").src = result.info.url;`
 
-#### 18. CRU"D" = Delete function for profile ads 
+### 18. CRU"D" = Delete function for profile ads 
 To delete a document use `<database>.<collection>.remove()`
 
-#### 19. Static CCS 
+### 19. Static CCS 
 * To create & link the style.css file
     * At the folder, create a new folder `static`
     * At the `static` folder, create a new file `style.css`
@@ -443,12 +501,12 @@ To delete a document use `<database>.<collection>.remove()`
 * Added <a href="https://getbootstrap.com/docs/4.0/components/navbar/">Bootstrap fixed top navigation bar</a>
 * Added a landing image by using <a href="https://www.w3.org/TR/css-images-3/#linear-gradients">linear-gradients</a> to make the image darker
 * Manage the "search function" layout, alignment and responsive variations by using <a href="https://getbootstrap.com/docs/4.1/utilities/flex/">.d-lg-flex</a>. 
-* Used of <a href="https://getbootstrap.com/docs/4.4/components/jumbotron/">Jumbotron</a> to extend the entire viewport at home page 
+* Used of <a href="https://getbootstrap.com/docs/4.4/components/jumbotron/">Jumbotron</a> to extend the entire viewport at profile advertisement section 
 * Fixed Ads Profile Card responsive by using <a href="https://getbootstrap.com/docs/4.0/utilities/spacing/">`mx-auto`</a> and <a href="https://getbootstrap.com/docs/4.3/components/card/">Bootscrap Card</a>
 * Used of <a href="https://fontawesome.com/v4.7.0/icons/">Font Awesome Icons</a> to represent accessibility standards
 * Used of `target="_blank"`to improve the UX, when user click on any link out (to another web site or social site), that opens a new window. 
 
-### C) PUBLICATION
+## C) PUBLICATION
 * Sign up for a <a href="https://www.heroku.com">Heroku</a> account
 * At Gitpod terminal : 
     * log into Heroku using  `heroku login`
@@ -470,7 +528,7 @@ To delete a document use `<database>.<collection>.remove()`
     * at the top left, cilck on "Open App" 
 * Done publication!!
 
-#### To update the Heroku deployed site 
+### To update the Heroku deployed site 
 * At Gitpod terminal : 
     * log into Heroku using  `heroku login`
     * to remote `git remote -v`
