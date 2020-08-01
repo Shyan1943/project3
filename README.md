@@ -105,7 +105,7 @@ Information required on the website to fulfill the content requirements.
 #### Content Structure (CS)
 In these modern days, users are constantly bombarded with too much content, people love simplicity. With this, we design it as a "One-page websites" offer a fast and clear reading experience. The contents will be regroup into a sequential structure as below IA Sitemap for landing Page & overall. 
 
-<img src="static/image/IASitemap_LandingPage.png" align="left" width="130px" height="420px"/>
+<img src="static/image/iasitemap_landingpage.png" align="left" width="130px" height="420px"/>
 
 ##### Landing Page :
 ```
@@ -125,14 +125,14 @@ CI5.	"C" + "U" sailing schedule button
 CI6.	"D" sailing schedule button		
 ```
 #### IA Sitemap (Overall)
-<img src="static/image/IASitemap_Overall.png"/>
+<img src="static/image/iasitemap_overall.png"/>
 
 
 #### Database Structure
 ##### Entity Relationship Diagram (ERD)
 This ERD  is relevant on this particular domain, consisting of three collections (User, sailing schedule & profile ads).
 
-<img src="static/image/data_ERD.jpg">
+<img src="static/image/data_erd.jpg">
 
 #### Data model
 ##### Logical Diagram
@@ -185,7 +185,7 @@ However,I will only implement 2 collections (sailing schedule & profile ads) on 
 <img src="/static/image/skeleton_landingpage.jpg" width="60%" height="60%">
 
 #### Sitemap (C+U+D Page)
-<img src="/static/image/skeleton_CUDpage.jpg" width="60%" height="60%">
+<img src="/static/image/skeleton_cudpage.jpg" width="60%" height="60%">
 			
 ### 4b) Navigation design 
 If External User get lost, the navigation bar will point them in the right direction. Bootstrap component will be used to make the fixed-top navigation responsive.
@@ -206,7 +206,7 @@ Button for "Update" & "Delete"
 ● Update & delete icon will be showed on every id object
 ```
 #### Button for "Update" & "Delete"
-<img src="/static/image/skeleton_UDbutton.jpg" width="30%" height="30%"> 
+<img src="/static/image/skeleton_udbutton.jpg" width="30%" height="30%"> 
 
 #### 4c) Information Design
 ##### Platform Branding
