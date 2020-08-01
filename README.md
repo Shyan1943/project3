@@ -226,7 +226,7 @@ A brand is the set of expectations, memories, stories and relationships that, ta
       (5. Surface Image) A modern & energetic aesthetic image 
 
 ## 5) SURFACE
-<img src="/static/image/surfacecolorpalette.jpg" align="left" width="390px" height="520px"/> 
+<img src="/static/image/surfacecolorpalette.jpg" align="left" width="430px" height="580px"/> 
 
 ### Colour
 The color palette keep at simple, with only 1–3 primary colors. In this website, the site logo is dark purple, so I will choose Green and light purple to neutral it. 
@@ -347,12 +347,22 @@ gunicorn==20.0.4
 | US7 CRUD data | Users able to add, update and delete their own sailing schedule. There are present and working |
 | US8 CRUD Image | Users able to add, update and delete their advertisement image on profile ads. There are present and working |
 
-## Tested with errors found
+## Tested with errors result
 ```
 5. US3 User interactions design
     Error found : table body very messy while hover due to size enlarge
     Corrective action : remove table tbody tr:hover from style.css
     Result : Look much better now!!
+
+6. CR3 "R" on Schedule date format
+    Error found : view schedule show date & time, which we only want to show date in YYYY-MM-DD only
+    Corrective action : added `.strftime('%Y-%m-%d')` to the function at the home.template.html
+    Result : fixed bug!!
+
+7. FR5 "U" on Schedule date
+    Error found : date does not show up on the schedule_update.template.html
+    Corrective action : added `.strftime('%Y-%m-%d')` to the function at the schedule_update.template.html
+    Result : fixed bug!!
 ```
 
 # DEPLOYMENT

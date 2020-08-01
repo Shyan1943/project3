@@ -63,10 +63,10 @@
             <tbody>
                 {% for s in schedules %}
                 <tr>
-                    <td>{{s.eta_pol}}</td>
+                    <td>{{s.eta_pol.strftime('%Y-%m-%d')}}</td>
                     <td>{{s.pol}}</td>
                     <td>{{s.pod}}</td>
-                    <td>{{s.eta_pod}}</td>
+                    <td>{{s.eta_pod.strftime('%Y-%m-%d')}}</td>
                     <td>{{s.vessel}}</td>
                     <td>{{s.vovage}}</td>
                     <td>{{s.transit_days}}</td>

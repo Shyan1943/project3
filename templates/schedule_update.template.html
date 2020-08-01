@@ -8,7 +8,7 @@
     <form method="POST">
         <div>
             <label>ETA POL :</label>
-            <input type="date" class="form-control" name="eta_pol" value="{{schedule.eta_pol}}"/>
+            <input type="date" class="form-control" name="eta_pol" value="{{schedule.eta_pol.strftime('%Y-%m-%d')}}"/>
         </div>
         <div>
             <label>POL :</label>
@@ -20,7 +20,7 @@
         </div>
         <div>
             <label>ETA POD :</label>
-            <input type="date" class="form-control" name="eta_pod" value="{{schedule.eta_pod}}"/>
+            <input type="date" class="form-control" name="eta_pod" value="{{schedule.eta_pod.strftime('%Y-%m-%d')}}"/>
         </div>
         <div>
             <label>Vessel :</label>

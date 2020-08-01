@@ -80,7 +80,7 @@ def schedule_create_process():
 
 
 @app.route("/schedule/update/<id>")
-def schedule_update_form(id):
+def schedule_update_form(id):    
     schedule = client[DB_NAME].schedule.find_one({
         "_id": ObjectId(id)
     })
@@ -99,14 +99,17 @@ def schedule_update_process(id):
     company_name = request.form.get("company_name")
     website = request.form.get("website")
 
+    eta_pol = datetime.datetime.strptime(eta_pol, "%Y-%m-%d")
+    eta_pod = datetime.datetime.strptime(eta_pod, "%Y-%m-%d")
+
     client[DB_NAME].schedule.update_one({
         "_id": ObjectId(id)
     }, {
         "$set": {
-            "eta_pol": datetime.datetime.strptime(eta_pol, "%Y-%m-%d"),
+            "eta_pol": eta_pol,
             "pol": pol,
             "pod": pod,
-            "eta_pod": datetime.datetime.strptime(eta_pod, "%Y-%m-%d"),
+            "eta_pod": eta_pod,
             "vessel": vessel,
             "vovage": vovage,
             "transit_days": transit_days,
