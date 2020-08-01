@@ -174,18 +174,17 @@ However,I will only implement 2 collections (sailing schedule & profile ads) on 
 ### 4a) Interface design
 <img src="/static/image/skeleton_mainlayout.jpg" align="left" width="200px" height="130px">
 
-
 1. Each page will include two parts - header and main content to keep the consistency
 2. Header include sections that will be repeated all the pages to improve predictability and consistency.
 3. Fixed-top Header will include a logo and the main navigation 
 4. The main content section will display content related to the page.
 
 
-#### Sitemap (Landing Page)
-<img src="/static/image/skeleton_landingpage.jpg" width="60%" height="60%">
+### Sitemap (Landing Page)
+<img src="/static/image/skeleton_landingpage.jpg">
 
 #### Sitemap (C+U+D Page)
-<img src="/static/image/skeleton_cudpage.jpg" width="60%" height="60%">
+<img src="/static/image/skeleton_cudpage.jpg">
 			
 ### 4b) Navigation design 
 If External User get lost, the navigation bar will point them in the right direction. Bootstrap component will be used to make the fixed-top navigation responsive.
@@ -206,7 +205,7 @@ Button for "Update" & "Delete"
 ● Update & delete icon will be showed on every id object
 ```
 #### Button for "Update" & "Delete"
-<img src="/static/image/skeleton_udbutton.jpg" width="30%" height="30%"> 
+<img src="/static/image/skeleton_udbutton.jpg"> 
 
 #### 4c) Information Design
 ##### Platform Branding
@@ -226,7 +225,7 @@ A brand is the set of expectations, memories, stories and relationships that, ta
       (5. Surface Image) A modern & energetic aesthetic image 
 
 ## 5) SURFACE
-<img src="/static/image/surfacecolorpalette.jpg" align="left" width="430px" height="600px"/> 
+<img src="/static/image/surfacecolorpalette.jpg" align="left" width="400px" height="680px"/> 
 
 ### Colour
 The color palette keep at simple, with only 1–3 primary colors. In this website, the site logo is dark purple, so I will choose Green and light purple to neutral it. 
@@ -365,22 +364,22 @@ gunicorn==20.0.4
     Corrective action : remove `resize : 4rem;` in style.css, but to `class="fa-5x"` at template.html 
     Result : Fixed bug!! No more error
 
-5. US3 User interactions design
+4. US3 User interactions design
     Error found : table body very messy while hover due to size enlarge
     Corrective action : remove table tbody tr:hover from style.css
     Result : Look much better now!!
 
-6. CR3 "R" on Schedule date format
+5. CR3 "R" on Schedule date format
     Error found : view schedule show date & time, which we only want to show date in YYYY-MM-DD only
     Corrective action : added `.strftime('%Y-%m-%d')` to the function at the home.template.html
     Result : fixed bug!!
 
-7. FR5 "U" on Schedule date
+6. FR5 "U" on Schedule date
     Error found : date does not show up on the schedule_update.template.html
     Corrective action : added `.strftime('%Y-%m-%d')` to the function at the schedule_update.template.html
     Result : fixed bug!!
 
-8. US3 User interactions on browers
+7. US3 User interactions on browers
     Error found : Bootstrap card does not display properly on Internet Explorer
     Corrective action : style .card-deck to display: block; learn from https://github.com/twbs/bootstrap/issues/21885
     Result : fixed bug!!
